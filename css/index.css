@@ -1,7 +1,100 @@
+/* RESET STYLES */
 
+@import url("reset.css");
 /*------------------------------
-               BODY
+               GENERAL
 --------------------------------*/
+html{height: 100%}
 body{
     font-family: Century Gothic, sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
+
+main {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/*-------------------------------
+            HEADER
+---------------------------------- */
+
+header {
+    background-color: #7D1128;
+    display: inline-block;
+    width: 85%;
+    margin-left: 15%;
+    position: fixed;
+}
+
+
+Header img{
+    height:90px;
+    width: 110px;
+    margin:10px;
+    float: left;
+    padding-top: 10px;
+}
+
+Header h1{
+    font-size: 250%;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px ;
+    color: white;
+    padding-left: 20px;
+    float: left;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+}
+
+/*---------------------------------
+            NAVIGATION
+ -----------------------------------*/
+
+nav {
+    display: inline-block;
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: #D5B9B2;
+    position: fixed;
+    padding-top: 60px;
+
+}
+
+Nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+Nav a:hover,  a:focus{
+    color: #f1f1f1;
+}
+
+/*------------------------------------
+            CONTENT
+ -------------------------------------*/
+
+main .content {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 15%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    margin-top: 9%;
+    padding-bottom: 3%;
+
+}
+
+
+
+
+

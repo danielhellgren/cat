@@ -3,16 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
-    <title>Curious About It</title>
+    <title>Curious About IT</title>
 </head>
-<body>
-<header>
+<body id="index">
 
-</header>
-<nav>
-
-</nav>
 <main>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </nav>
+    <header>
+       <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
+        <h1>Curious About IT</h1>
+    </header>
+
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor risus sed faucibus iaculis. Mauris diam dolor, eleifend vitae libero a, interdum mattis velit. Vivamus vitae tellus ut eros posuere dignissim. Vivamus sed neque sit amet lectus feugiat fermentum et eu ipsum. Mauris ut nibh nibh. Curabitur tempor placerat elit semper rhoncus. Vivamus quam mauris, malesuada ac faucibus at, vehicula vitae odio. Phasellus interdum elit sit amet fringilla interdum. Nunc varius augue magna, eget bibendum arcu hendrerit ac. Morbi tempus magna id eros porttitor euismod vel vitae lectus. Vivamus pharetra, enim eu placerat ullamcorper, ipsum lorem dictum sapien, eu congue tortor massa in dui. Aliquam sit amet dictum erat.
+
+        Sed effic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed hendrerit mauris. Donec est massa, malesuada ac lacus vitae, bibendum scelerisque nisl. Cras eleifend sollicitudin metus, ac pulvinar diam pellentesque quis. Curabitur fringilla faucibus tellus, id suscipit neque pulvinar porttitor. Aliquam erat volutpat. Nam lobortis iaculis laoreet. Duis lacinia diam imperdiet ultricies auctor. Suspendisse gravida, quam nec gravida venenatis, dui massa dignissim nisl, at condimentum tortor sem at arcu. Phasellus feugiat auctor malesuada. Praesent rutrum tempor eros eu aliquet.
+
+        Maecenas iaculis molestie porta. Pell
+        You have it covered aside from using the wrong property. The scrollbar can be triggered with any property overflow, overflow-x, or overflow-y and each can be set to any of visible, hidden, scroll, auto, or inherit. You are currently looking at these two:
+
+        auto - This value will look at the width and height of the box. If they are defined, it won't let the box expand past those boundaries. Instead (if the content exceeds those boundaries), it will create a scrollbar for either boundary (or both) that exceeds its length.
+        scroll - This values forces a scrollbar, no matter what, even if the content does not exceed the boundary set. If the content doesn't need to be scrolled, the bar will appear as "disabled" or non-interactive.
+        If you always want the vertical scrollbar to appear:
+
+        You should use overflow-y: scroll. This forces a scrollbar to appear for the vertical axis whether or not it is needed. If you can't actually scroll the context, it will appear as a"disabled" scrollbar.
+
+        If you only want a scrollbar to appear if you can scroll the box:
+
+        Just use overflow: auto. Since your content by default just breaks to the next line when it cannot fit on the current line, a horizontal scrollbar won't be created (unless it's on an element that has word-wrapping disabled). For the vertical bar,it will allow the content to expand up to the height you have specified. If it exceeds that height, it will show a vertical scrollbar to view the rest of the content, but will not show a scrollbar if it does not exceed the height.entesque id tempus diam. Praesent in enim in mauris lobortis accumsan et et ligula. Maecenas vitae dui quis turpis tempor sodales. Ut dictum tortor quis dolor pulvinar egestas. Fusce tempus eu mauris aliquam ornare. Nulla libero justo, lobortis sed tincidunt sed, tincidunt vel diam. Aliquam orci augue, vehicula et orci pharetra, maximus euismod ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce et tortor at purus sodales vulputate ut id ligula. Duis nec blandit justo, non vehicula nunc. In mattis metus ac leo accumsan dictum.
+
+        Aliquam facilisis arcu vel massa pulvinar lacinia. Curabitur lorem nisi, tempor tristique dui id, molestie sollicitudin nibh. Maecenas vestibulum mollis lectus at accumsan. Vivamus nec semper quam. Nullam mollis nunc nisi, ut vehicula libero rhoncus eleifend. Sed a dictum erat. Suspendisse mattis elementum augue et sollicitudin. In fringilla accumsan mi, at varius ex sagittis eu. Donec at sapien tempor, imperdiet felis sed, mattis eros. Curabitur eu dolor porttitor, cursus diam eu, feugiat odio.
+
+        Aenean blandit elementum magna, in porttitor enim rhoncus a. Vestibulum posuere risus id urna facilisis, id malesuada lacus sagittis. Aenean sed ipsum molestie, bibendum nibh quis, pulvinar diam. Fusce dictum magna vulputate massa rhoncus, id consectetur felis mattis. Vivamus facilisis tincidunt arcu eget tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed urna in arcu euismod suscipit sit amet in libero. Donec non ipsum vitae turpis rutrum consequat malesuada tempor est. Aliquam a dui euismod, ornare odio vel, sagittis velit. Integer dictum hendrerit eros, a tempor eros mollis a. Quisque egestas ante id mattis tincidunt. Suspendisse ultricies, lectus sit amet scelerisque dapibus, justo neque pulvinar magna, quis congue ex arcu vel nibh. Nullam tristique pellentesque nisi at imperdiet.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed hendrerit mauris. Donec est massa, malesuada ac lacus vitae, bibendum scelerisque nisl. Cras eleifend sollicitudin metus, ac pulvinar diam pellentesque quis. Curabitur fringilla faucibus tellus, id suscipit neque pulvinar porttitor. Aliquam erat volutpat. Nam lobortis iaculis laoreet. Duis lacinia diam imperdiet ultricies auctor. Suspendisse gravida, quam nec gravida venenatis, dui massa dignissim nisl, at condimentum tortor sem at arcu. Phasellus feugiat auctor malesuada. Praesent rutrum tempor eros eu aliquet.
+
+        Maecenas iaculis molestie porta. Pellentesque id tempus diam. Praesent in enim in mauris lobortis accumsan et et ligula. Maecenas vitae dui quis turpis tempor sodales. Ut dictum tortor quis dolor pulvinar egestas. Fusce tempus eu mauris aliquam ornare. Nulla libero justo, lobortis sed tincidunt sed, tincidunt vel diam. Aliquam orci augue, vehicula et orci pharetra, maximus euismod ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce et tortor at purus sodales vulputate ut id ligula. Duis nec blandit justo, non vehicula nunc. In mattis metus ac leo accumsan dictum.
+
+        Aliquam facilisis arcu vel massa pulvinar lacinia. Curabitur lorem nisi, tempor tristique dui id, molestie sollicitudin nibh. Maecenas vestibulum mollis lectus at accumsan. Vivamus nec semper quam. Nullam mollis nunc nisi, ut vehicula libero rhoncus eleifend. Sed a dictum erat. Suspendisse mattis elementum augue et sollicitudin. In fringilla accumsan mi, at varius ex sagittis eu. Donec at sapien tempor, imperdiet felis sed, mattis eros. Curabitur eu dolor porttitor, cursus diam eu, feugiat odio.
+
+        Aenean blandit elementum magna, in porttitor enim rhoncus a. Vestibulum posuere risus id urna facilisis, id malesuada lacus sagittis. Aenean sed ipsum molestie, bibendum nibh quis, pulvinar diam. Fusce dictum magna vulputate massa rhoncus, id consectetur felis mattis. Vivamus facilisis tincidunt arcu eget tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed urna in arcu euismod suscipit sit amet in libero. Donec non ipsum vitae turpis rutrum consequat malesuada tempor est. Aliquam a dui euismod, ornare odio vel, sagittis velit. Integer dictum hendrerit eros, a tempor eros mollis a. Quisque egestas ante id mattis tincidunt. Suspendisse ultricies, lectus sit amet scelerisque dapibus, justo neque pulvinar magna, quis congue ex arcu vel nibh. Nullam tristique pellentesque nisi at imperdiet.
+
+        Suspendisse vestibulum quam nec tincidunt tristique. Duis sollicitudin orci turpis, luctus congue ante sodales vitae. Maecenas tempor scelerisque lacus at porttitor. Duis blandit massa magna, ac tincidunt sem dapibus pellentesque. Cras ornare metus a urna vestibulum fringilla nec ut neque. Nulla tortor nulla, feugiat eu massa id, volutpat ultricies quam. Morbi dictum vel ex eu porttitor. Nulla dictum purus non magna tempus ullamcorper. Quisque arcu nunc, tempus vitae aliquet non, viverra in erat. Pellentesque sed rhoncus nibh, eget pellentesque felis. Proin cursus consequat ligula id venenatis. Morbi ut erat id metus convallis ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris sit amet urna efficitur, finibus leo a, dictum sapien. Integer id mauris eget turpis tincidunt fringilla. Integer ac orci ut nunc rutrum rutrum.
+        Suspendisse vestibulum quam nec tincidunt tristique. Duis sollicitudin orci turpis, luctus congue ante sodales vitae. Maecenas tempor scelerisque lacus at porttitor. Duis blandit massa magna, ac tincidunt sem dapibus pellentesque. Cras ornare metus a urna vestibulum fringilla nec ut neque. Nulla tortor nulla, feugiat eu massa id, volutpat ultricies quam. Morbi dictum vel ex eu porttitor. Nulla dictum purus non magna tempus ullamcorper. Quisque arcu nunc, tempus vitae aliquet non, viverra in erat. Pellentesque sed rhoncus nibh, eget pellentesque felis. Proin cursus consequat ligula id venenatis. Morbi ut erat id metus convallis ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris sit amet urna efficitur, finibus leo a, dictum sapien. Integer id mauris eget turpis tincidunt fringilla. Integer ac orci ut nunc rutrum rutrum. </p>
+    </div> <!-- CLOSE CONTENT DIV -->
 </main>
 
 
