@@ -28,16 +28,14 @@ header {
     width: 85%;
     margin-left: 15%;
     position: fixed;
-    transition: all 0.3s;
 }
 
 
 Header img{
-    height:90px;
-    width: 110px;
+    height:70px;
+    width: 90px;
     margin:10px;
     float: left;
-    padding-top: 10px;
 }
 
 Header h1{
@@ -47,10 +45,11 @@ Header h1{
     color: white;
     padding-left: 20px;
     float: left;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 
 }
+
 
 /*---------------------------------
             NAVIGATION
@@ -71,7 +70,6 @@ Nav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    /*color: #818181;*/
     color: #7D1128;
     display: block;
 }
@@ -91,11 +89,47 @@ main .content {
     padding-left: 3%;
     padding-top: 3%;
     padding-right: 3%;
-    margin-top: 9%;
+    margin-top: 7%;
     padding-bottom: 3%;
 
 }
 
+main .content h1 {
+    font-size: 150%;
+    margin: 1%;
+    padding-top: 1%;
+}
+
+main .content p {
+    padding: 5px;
+}
+
+main .content img {
+    width: 95%;
+    padding-left: 3%;
+    padding-top: 2%;
+
+}
+
+/*
+            -TEXT1-
+*/
+
+main .content .text1 {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+/*
+            -TEXT2-
+*/
+
+main .content .text2 {
+    display: inline-block;
+    float: right;
+    width: 50%;
+}
 
 
 
