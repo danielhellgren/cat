@@ -2,4 +2,10 @@
     width: 500px;
     height: 500px;
     background-color: #CEBEBE;
+    border: solid 1px black;
+}
+
+#menu {
+    height: 500px;
+    border: solid 1px black;
 }

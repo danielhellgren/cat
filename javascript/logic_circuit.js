@@ -35,10 +35,13 @@ function init() {
 
     var circuitModel = MAKE(go.Model); // The Model hold all data, that is, an array of JavaScript objects
     // In th Model, each node is represented by a JavaScript object
+
+    /*
     circuitModel.nodeDataArray = [
         { key: "and", category: "andgate"},
         { key: "not", category: "notgate"}
     ];
+    */
 
     circuit.model = circuitModel;
 
@@ -122,4 +125,14 @@ function init() {
     logicMap.add("", circuit.nodeTemplate);
 
     circuit.nodeTemplateMap = logicMap;
+
+    var menu = new go.Palette("menu"); // "Side menu" for displaying all circuit/logic objects
+
+    menu.nodeTemplateMap = logicMap;
+
+    menu.model.nodeDataArray = [
+        {category: "andgate"},
+        {category: "notgate"}
+    ];
+
 }
