@@ -20,30 +20,33 @@ function init() {
                 "undoManager.isEnabled": true, // Used for undo/redo
                 allowDrop: true // Allowing nodes to be dropped on the diagram from menu
             });
-    /*
-    circuit.nodeTemplate =
-        MAKE(go.Node, "Auto",
+
+    //circuit.model = MAKE(go.Model);
+    //circuit.nodeDataArray = [];
+
+    circuit.model =
+        MAKE(go.GraphLinksModel,
+            {
+                linkFromPortIdProperty: "fromPort",
+                linkToPortIdProperty: "toPort",
+                nodeDataArray: [], // no preset for nodes
+                linkDataArray: [] // no preset for links between nodes
+            }
+        );
+
+    // Making it possible to draw links between the logic gates and IO
+    circuit.linkTemplate =
+        MAKE(go.Link,
+            {
+                routing: go.Link.AvoidsNodes,
+                curve: go.Link.JumpOver,
+                corner: 3,
+                relinkableFrom: true, relinkableTo: true,
+                selectionAdorned: false, // Links are not adorned when selected so that their color remains visible.
+                shadowOffset: new go.Point(0, 0), shadowBlur: 5, shadowColor: "blue"
+            },
             MAKE(go.Shape,
-                {figure: "Rectangle",
-                 fill: "white"},
-                new go.Binding("fill", "color")),
-            MAKE(go.TextBlock,
-                {margin: 3},
-                new go.Binding("text", "key"))
-            );
-    */
-
-    var circuitModel = MAKE(go.Model); // The Model hold all data, that is, an array of JavaScript objects
-    // In th Model, each node is represented by a JavaScript object
-
-    /*
-    circuitModel.nodeDataArray = [
-        { key: "and", category: "andgate"},
-        { key: "not", category: "notgate"}
-    ];
-    */
-
-    circuit.model = circuitModel;
+                { name: "SHAPE", strokeWidth: 2, stroke: "red" }));
 
     // Provide custom Node appearance
     // Used for specifying logical gates
@@ -56,29 +59,38 @@ function init() {
             ),
             MAKE(go.Shape, "Rectangle",
                 {fill: "black",
-                 desiredSize: new go.Size(8,8),
-                 fromSpot: go.Spot.Right,
-                 toSpot: go.Spot.Left,
-                 portId: "Input",
-                 alignment: new go.Spot(0, 0.25)
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input",
+                    alignment: new go.Spot(0, 0.25),
+                    cursor: "pointer"
                 }
             ),
             MAKE(go.Shape, "Rectangle",
                 {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
+                    fromLinkable: false,
                     toSpot: go.Spot.Left,
+                    toLinkable: true,
                     portId: "Input",
-                    alignment: new go.Spot(0, 0.75)
+                    alignment: new go.Spot(0, 0.75),
+                    cursor: "pointer"
                 }
             ),
             MAKE(go.Shape, "Rectangle",
                 {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
+                    fromLinkable: true,
                     toSpot: go.Spot.Left,
-                    portId: "Input",
-                    alignment: new go.Spot(1, 0.5)
+                    toLinkable: false,
+                    portId: "Output",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
                 }
             )
         );
@@ -93,46 +105,94 @@ function init() {
                 {fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
+                    fromLinkable: false,
                     toSpot: go.Spot.Left,
+                    toLinkable: true,
                     portId: "Input",
-                    alignment: new go.Spot(0, 0.25)
+                    alignment: new go.Spot(0, 0.5),
+                    cursor: "pointer"
                 }
             ),
             MAKE(go.Shape, "Rectangle",
                 {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
+                    fromLinkable: true,
                     toSpot: go.Spot.Left,
-                    portId: "Input",
-                    alignment: new go.Spot(0, 0.75)
-                }
-            ),
-            MAKE(go.Shape, "Rectangle",
-                {   fill: "black",
-                    desiredSize: new go.Size(8,8),
-                    fromSpot: go.Spot.Right,
-                    toSpot: go.Spot.Left,
-                    portId: "Input",
-                    alignment: new go.Spot(1, 0.5)
+                    toLinkable: false,
+                    portId: "Output",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
                 }
             )
         );
 
-    var logicMap = new go.Map("string", go.Node);
+    var input =
+        MAKE(go.Node, "Spot",
+            {shadowBlur: 10, shadowColor: "black"},
+            MAKE(go.Shape, "Rectangle",
+                {fill: "green", stroke: "black", strokeWidth: 3}
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: true,
+                    toSpot: go.Spot.Left,
+                    toLinkable: false,
+                    portId: "Input",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
+                }
+            )
+        );
 
-    logicMap.add("andgate", andGate);
-    logicMap.add("notgate", notGate);
-    logicMap.add("", circuit.nodeTemplate);
+    var output =
+        MAKE(go.Node, "Spot",
+            {shadowBlur: 10, shadowColor: "black"},
+            MAKE(go.Shape, "Circle",
+                {fill: "red", stroke: "black", strokeWidth: 3}
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Output",
+                    alignment: new go.Spot(0, 0.5),
+                    cursor: "pointer"
+                }
+            )
+        );
 
-    circuit.nodeTemplateMap = logicMap;
+    var menuMap = new go.Map("string", go.Node);
 
-    var menu = new go.Palette("menu"); // "Side menu" for displaying all circuit/logic objects
+    menuMap.add("andgate", andGate);
+    menuMap.add("notgate", notGate);
+    menuMap.add("input", input);
+    menuMap.add("output", output);
 
-    menu.nodeTemplateMap = logicMap;
+    circuit.nodeTemplateMap = menuMap;
 
-    menu.model.nodeDataArray = [
+    // "Side menu" for displaying all circuit objects (logic gates and IO)
+    var gateMenu = new go.Palette("gateMenu");
+    var ioMenu = new go.Palette("ioMenu");
+
+    gateMenu.nodeTemplateMap = menuMap;
+    ioMenu.nodeTemplateMap = menuMap;
+
+    // Adding the logic gate templates to the logic gate menu
+    gateMenu.model.nodeDataArray = [
         {category: "andgate"},
         {category: "notgate"}
     ];
+    // Adding the input/output templates to the IO menu
+    ioMenu.model.nodeDataArray = [
+        {category: "input"},
+        {category: "output"}
+    ];
+
 
 }
