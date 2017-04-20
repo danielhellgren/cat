@@ -14,3 +14,10 @@
     height: 500px;
     border: solid 1px black;
 }
+
+button {
+    display: block;
+    width: 100px;
+    padding: 30px;
+    margin: 5px;
+}

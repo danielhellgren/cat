@@ -5,6 +5,7 @@
     <title>Logic Circuit Test Page</title>
     <!-- Using go-debug.js right now (only for development, use go.js when deploying)-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.7/go-debug.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="javascript/go-watermark.js"></script>
     <script src="javascript/logic_circuit.js"></script>
     <link href="css/logic_circuit.css" rel="stylesheet" type="text/css">
@@ -13,24 +14,32 @@
     </script>
 </head>
 <body>
-<div>
+    <div id="circuitContainer">
         <span style="display: inline-block; vertical-align: top; width:150px">
             <div id="gateMenu">
 
             </div>
         </span>
 
-    <span style="display: inline-block; vertical-align: top; width:150px">
+        <span style="display: inline-block; vertical-align: top; width:150px">
             <div id="ioMenu">
 
             </div>
         </span>
 
-    <span style="display: inline-block; vertical-align: top; width:70%">
+        <span style="display: inline-block; vertical-align: top; width:500px">
             <div id="logicDiagram">
 
             </div>
         </span>
-</div>
+
+        <span style="display: inline-block; vertical-align: top; width: 150px">
+            <div id="buttonContainer">
+                <button id="undoButton">Undo</button>
+                <button id="redoButton">Redo</button>
+                <button id="clearButton">Clear</button>
+            </div>
+        </span>
+    </div>
 </body>
 </html>
