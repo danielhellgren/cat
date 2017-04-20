@@ -18,11 +18,11 @@ function init() {
     //document.getElementById("redoButton").addEventListener("click", function() {});
 
     /*
-    function undoState(e,obj,o) {
-        e.diagram.commandHandler.undo();
-        return o.diagram.commandHandler.canUndo();
-    }
-    */
+     function undoState(e,obj,o) {
+     e.diagram.commandHandler.undo();
+     return o.diagram.commandHandler.canUndo();
+     }
+     */
 
     // Create empty diagram
     var MAKE = go.GraphObject.make;
@@ -265,23 +265,47 @@ function init() {
     circuit.nodeTemplateMap = menuMap;
 
     // "Side menu" for displaying all circuit objects (logic gates and IO)
-    var gateMenu = new go.Palette("gateMenu");
-    var ioMenu = new go.Palette("ioMenu");
+    //var gateMenu = new go.Palette("gateMenu");
+    //var ioMenu = new go.Palette("ioMenu");
 
-    gateMenu.nodeTemplateMap = menuMap;
-    ioMenu.nodeTemplateMap = menuMap;
+    gateMenu =
+        MAKE(go.Palette, "gateMenu",
+            { // share the templates with the main Diagram
+                nodeTemplateMap: menuMap,
+                layout: MAKE(go.GridLayout)
+            });
+
+    ioMenu =
+        MAKE(go.Palette, "ioMenu",
+            { // share the templates with the main Diagram
+                nodeTemplateMap: menuMap,
+                layout: MAKE(go.GridLayout)
+            });
+
+    //gateMenu.nodeTemplateMap = menuMap;
+    //ioMenu.nodeTemplateMap = menuMap;
 
     // Adding the logic gate templates to the logic gate menu
-    gateMenu.model.nodeDataArray = [
+    gateMenu.model = new go.GraphLinksModel([
         {category: "andgate"},
         {category: "notgate"},
         {category: "orgate"}
-    ];
+    ]);
+
     // Adding the input/output templates to the IO menu
-    ioMenu.model.nodeDataArray = [
+    ioMenu.model = new go.GraphLinksModel([
         {category: "input"},
         {category: "output"}
-    ];
+    ]);
+
+    $("#accordion").accordion({
+        activate: function(event, ui) {
+            gateMenu.requestUpdate();
+            ioMenu.requestUpdate();
+        },
+        collapsible: true,
+        heightStyle: "content"
+    });
 
     loop();
 }
@@ -341,11 +365,20 @@ function update() {
     // now we can do all other kinds of nodes
     circuit.nodes.each(function(node) {
         switch (node.category) {
-            case "andgate":       andUpdate(node); break;
-            case "orgate":         orUpdate(node); break;
-            case "notgate":       notUpdate(node); break;
-            case "output": outputUpdate(node); break;
-            case "input": break;  // doInput already called, above
+            case "andgate":
+                andUpdate(node);
+                break;
+            case "orgate":
+                orUpdate(node);
+                break;
+            case "notgate":
+                notUpdate(node);
+                break;
+            case "output":
+                outputUpdate(node);
+                break;
+            case "input":
+                break;  // doInput already called, above
         }
     });
     // Setting UndoManager back to initial value

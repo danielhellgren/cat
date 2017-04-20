@@ -1,18 +1,17 @@
 #logicDiagram {
-    width: 500px;
     height: 500px;
     background-color: #CEBEBE;
     border: solid 1px black;
 }
 
 #gateMenu {
-    height: 500px;
-    border: solid 1px black;
+    height: 390px;
+    width: 160px;
 }
 
 #ioMenu {
-    height: 500px;
-    border: solid 1px black;
+    height: 390px;
+    width: 160px;
 }
 
 button {
@@ -20,4 +19,8 @@ button {
     width: 100px;
     padding: 30px;
     margin: 5px;
+}
+
+#accordion .ui-accordion-content {
+    max-height: 390px;
 }
