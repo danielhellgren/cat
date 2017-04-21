@@ -10,26 +10,31 @@ function indexPageLoaded() {
     init();
 }
 
+var myContextMenu;
+
 function init() {
-
-    // Event listeners for side menu buttons
-    //console.log(document.getElementById("undoButton"));
-    //document.getElementById("undoButton").addEventListener("click", function(e,obj) {undoState(e,obj)});
-    //document.getElementById("redoButton").addEventListener("click", function() {});
-
     /*
+    console.log(document.getElementById("undoButton"));
+    document.getElementById("undoButton").addEventListener("click", function(e,obj) {undoState(e,obj)});
+    document.getElementById("redoButton").addEventListener("click", function() {});
+
      function undoState(e,obj,o) {
-     e.diagram.commandHandler.undo();
-     return o.diagram.commandHandler.canUndo();
+        e.diagram.commandHandler.undo();
+        return o.diagram.commandHandler.canUndo();
      }
      */
 
-    // Create empty diagram
+    // Event listeners for triggering the context menu functions
+    document.getElementById("copy").addEventListener("click", function() {menuHandle("copy")});
+    document.getElementById("cut").addEventListener("click", function() {menuHandle("cut")});
+    document.getElementById("paste").addEventListener("click", function() {menuHandle("paste")});
+    document.getElementById("delete").addEventListener("click", function() {menuHandle("delete")});
+
+    // Create empty diagram (this is the base)
     var MAKE = go.GraphObject.make;
     circuit =
-        MAKE(go.Diagram, "logicDiagram", // Specify the diagram by using the div's ID
+        MAKE(go.Diagram, "logicDiagram", // Specify the diagram by using the HTML div's ID
             {
-                initialContentAlignment: go.Spot.Center, // center content in diagram
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
                 allowDrop: true // Allowing nodes to be dropped on the diagram from menu
             });
@@ -55,20 +60,116 @@ function init() {
                 curve: go.Link.JumpOver, // New links will "jump over" existing links
                 corner: 3, // The "sharpness" of link corners
                 relinkableFrom: true, relinkableTo: true,
-                shadowOffset: new go.Point(0, 0), shadowBlur: 5, shadowColor: "blue"
+                shadowOffset: new go.Point(0, 0),
+                shadowBlur: 5,
+                shadowColor: "blue"
             },
             MAKE(go.Shape,
-                { name: "linkShape", strokeWidth: 4, stroke: "green" }));
+                { name: "linkShape", strokeWidth: 4, stroke: "green", contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)}));
+
+    // Code for implementing the context menu
+    // Defining a context menu to the diagram
+    circuit.contextMenu = MAKE(go.Adornment, go.Panel.Horizontal);
+
+    // Responsible for managing the context menu functionality through contextMenuTool, automatically disables the browser's default context menu
+    cxMenu = circuit.toolManager.contextMenuTool;
+
+    var context = document.getElementById("contextMenu");
+    context.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+    context.addEventListener("blur", function(e) { cxMenu.stopTool(); }, false);
+    
+    var cutButton = document.getElementById("cut");
+    var copyButton = document.getElementById("copy");
+    var pasteButton = document.getElementById("paste");
+    var deleteButton = document.getElementById("delete");
+
+    // Function for displaying the context menu in the correct location (based on the cursor position)
+    showContext = function(contextmenu, node) {
+        // Get the last mouse click that occurred and its coordinate 
+        var mousePosition = this.diagram.lastInput.viewPoint;
+        // Hide any other context menu (if existing)
+        if (contextmenu !== this.currentContextMenu) {
+            this.hideContextMenu();
+        }
+        // Check if clicking on an actual node or the background, and if there exist a section that can be pasted on the diagram
+        // This allows for only displaying relevant buttons (or the context menu itself)
+        if (node !== null || this.diagram.commandHandler.canPasteSelection()) {
+            console.log(node);
+            // If clicking on an existing node, the paste option should not be available
+            if (node !== null) {
+                cutButton.style.display = "block";
+                copyButton.style.display = "block";
+                pasteButton.style.display = "none";
+                deleteButton.style.display = "block";
+            // If clicking on the background, the paste option should be to only available option
+            } else {
+                cutButton.style.display = "none";
+                copyButton.style.display = "none";
+                deleteButton.style.display = "none";
+                pasteButton.style.display = "block";
+            }
+            // Specifies where the context menu should be shown in the diagram
+            context.style.display = "block";
+            context.style.left = mousePosition.x + "px";
+            context.style.top = mousePosition.y + "px";
+        }
+        this.currentContextMenu = contextmenu;
+        // Save for displaying the context menu until user has made choice
+        myContextMenu = this;
+    };
+
+    // Function for hiding the context menu
+    hideContext = function() {
+        if (this.currentContextMenu == null) return;
+        context.style.display = "none";
+        this.currentContextMenu = null;
+        // Save for button interaction
+        myContextMenu = null;
+    };
+
+    // Specifying the show/hide functions to the context menu class
+    cxMenu.showContextMenu = showContext;
+    cxMenu.hideContextMenu = hideContext;
+
+    // Function for actually performing the context menu options when clicked
+    function menuHandle(choice) {
+        if (myContextMenu === null) return;
+        var diagram = myContextMenu.diagram;
+        switch(choice) {
+            case "cut":
+                diagram.commandHandler.cutSelection();
+                break;
+            case "copy":
+                diagram.commandHandler.copySelection();
+                break;
+            case "paste":
+                diagram.commandHandler.pasteSelection(diagram.lastInput.documentPoint);
+                break;
+            case "delete":
+                diagram.commandHandler.deleteSelection();
+                break;
+        }
+        myContextMenu.stopTool();
+    }
 
     // Provide custom node appearances for all needed diagram objects
     // Used for specifying logical gates shape and IO
 
     var andGate =
         MAKE(go.Node, "Spot",
-            {shadowBlur: 20, shadowColor: "black",  selectionAdorned: false, shadowOffset: new go.Point(0, 0)},
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
             new go.Binding("isShadowed", "isSelected").ofObject(),
             MAKE(go.Shape, "AndGate",
-                {fill: "lightgray", stroke: "black", strokeWidth: 3, name: "NODESHAPE"}
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape"
+                }
             ),
             MAKE(go.Shape, "Rectangle",
                 {   fill: "black",
@@ -111,13 +212,22 @@ function init() {
 
     var notGate =
         MAKE(go.Node, "Spot",
-            {shadowBlur: 20, shadowColor: "black",  selectionAdorned: false, shadowOffset: new go.Point(0, 0)},
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
             new go.Binding("isShadowed", "isSelected").ofObject(),
             MAKE(go.Shape, "Inverter",
-                {fill: "lightgray", stroke: "black", strokeWidth: 3, name: "NODESHAPE"}
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape"
+                }
             ),
             MAKE(go.Shape, "Rectangle",
-                {fill: "black",
+                {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
                     fromLinkable: false,
@@ -144,13 +254,22 @@ function init() {
 
     var orGate =
         MAKE(go.Node, "Spot",
-            {shadowBlur: 20, shadowColor: "black",  selectionAdorned: false, shadowOffset: new go.Point(0, 0)},
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
             new go.Binding("isShadowed", "isSelected").ofObject(),
             MAKE(go.Shape, "OrGate",
-                {fill: "lightgray", stroke: "black", strokeWidth: 3, name: "NODESHAPE"}
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape"
+                }
             ),
             MAKE(go.Shape, "Rectangle",
-                {fill: "black",
+                {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
                     fromLinkable: false,
@@ -162,7 +281,7 @@ function init() {
                 }
             ),
             MAKE(go.Shape, "Rectangle",
-                {fill: "black",
+                {   fill: "black",
                     desiredSize: new go.Size(8,8),
                     fromSpot: go.Spot.Right,
                     fromLinkable: false,
@@ -189,13 +308,24 @@ function init() {
 
     var input =
         MAKE(go.Node, "Spot",
-            {shadowBlur: 20, shadowColor: "black",  selectionAdorned: false, shadowOffset: new go.Point(0, 0)},
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
             new go.Binding("isShadowed", "isSelected").ofObject(),
             MAKE(go.Shape, "Rectangle",
-                {fill: "lightgray", stroke: "black", strokeWidth: 3}
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3
+                }
             ),
             MAKE(go.Shape, "Circle",
-                {fill: "green", desiredSize: new go.Size(75,75), name: "NODESHAPE"}
+                {   fill: "green",
+                    desiredSize: new go.Size(75,75),
+                    name: "nodeShape"
+                }
             ),
             MAKE(go.TextBlock,
                 {textAlign: "center"}
@@ -217,13 +347,24 @@ function init() {
 
     var output =
         MAKE(go.Node, "Spot",
-            {shadowBlur: 20, shadowColor: "black",  selectionAdorned: false, shadowOffset: new go.Point(0, 0)},
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
             new go.Binding("isShadowed", "isSelected").ofObject(),
             MAKE(go.Shape, "Circle",
-                {fill: "lightgray", stroke: "black", strokeWidth: 3}
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3
+                }
             ),
             MAKE(go.Shape, "Circle",
-                {fill: "green", desiredSize: new go.Size(75,75), name: "NODESHAPE"}
+                {   fill: "green",
+                    desiredSize: new go.Size(75,75),
+                    name: "nodeShape"
+                }
             ),
             MAKE(go.Shape, "Rectangle",
                 {   fill: "black",
@@ -239,17 +380,16 @@ function init() {
             )
         );
 
-
     function inputState(e, node) {
         // Wrapping the state change in a transaction for undo/redo
         e.diagram.startTransaction("setInputState");
-        // Search for input object with name property "NODESHAPE" and returns that object, making it possible to update its fill color
-        console.log(node.findObject("NODESHAPE").fill);
-        node.findObject("NODESHAPE").fill = (node.findObject("NODESHAPE").fill == "#00ff00") ? "green" : "#00ff00";
+        // Search for input object with name property "nodeShape" and returns that object, making it possible to update its fill color
+        console.log(node.findObject("nodeShape").fill);
+        node.findObject("nodeShape").fill = (node.findObject("nodeShape").fill == "#00ff00") ? "green" : "#00ff00";
         // Since an input's state may have changed (indicated by a color change) it's necessary to update all nodes/links
         update();
         console.log("Input state updated!");
-        console.log(node.findObject("NODESHAPE").fill);
+        console.log(node.findObject("nodeShape").fill);
         // Closing transaction
         e.diagram.commitTransaction("setInputState");
     }
@@ -264,9 +404,7 @@ function init() {
 
     circuit.nodeTemplateMap = menuMap;
 
-    // "Side menu" for displaying all circuit objects (logic gates and IO)
-    //var gateMenu = new go.Palette("gateMenu");
-    //var ioMenu = new go.Palette("ioMenu");
+    // "Side menus" for displaying all circuit objects (logic gates and IO)
 
     gateMenu =
         MAKE(go.Palette, "gateMenu",
@@ -298,6 +436,7 @@ function init() {
         {category: "output"}
     ]);
 
+    // jQuery accordion for the side menus
     $("#accordion").accordion({
         activate: function(event, ui) {
             gateMenu.requestUpdate();
@@ -306,21 +445,22 @@ function init() {
         collapsible: true,
         heightStyle: "content"
     });
-
-    loop();
+    
+    // Updating circuit state
+    continueUpdate();
 }
 
-// Making sure the diagram is updated (right now every 100 millisecond)
-function loop() {
-    setTimeout(function() { update(); loop(); }, 100);
+// Making sure the diagram is updated constantly (right now every 100 millisecond)
+function continueUpdate() {
+    setTimeout(function() { update(); continueUpdate(); }, 100);
     console.log("Updating");
 }
 
-// These functions just update all gates and IO based on the color of the links
-// "Green" indicates a low signal (0) and "#00ff00" indicates a high signal (1)
+// These are just auxiliary functions to update all gates and IO based on the color of the links
+// "green" indicates a low signal (0) and "#00ff00" (light green) indicates a high signal (1)
 
 function inputUpdate(node) {
-    setOutputLinks(node, node.findObject("NODESHAPE").fill);
+    setOutputLinks(node, node.findObject("nodeShape").fill);
 }
 
 function andUpdate(node) {
@@ -339,7 +479,7 @@ function orUpdate(node) {
 }
 
 function outputUpdate(node) {
-    node.linksConnected.each(function(link) { node.findObject("NODESHAPE").fill = link.findObject("linkShape").stroke; });
+    node.linksConnected.each(function(link) { node.findObject("nodeShape").fill = link.findObject("linkShape").stroke; });
 }
 
 function linkIsTrue(link) {  // assume the given Link has a Shape named "linkShape"
@@ -352,17 +492,13 @@ function setOutputLinks(node, color) {
 
 // Updates all nodes and links in the circuit diagram (update dependent on node type and input values)
 function update() {
-    // For remembering the UndoManager value
-    var currentUndoManager = circuit.skipsUndoManager;
-    // Temporarily turn off UndoManager recording of changed events
-    circuit.skipsUndoManager = true;
-    // Updating all input nodes in the diagram
+    // Start with updating all inputs (as these are the ones setting the state in the circuit)
     circuit.nodes.each(function(node) {
         if (node.category == "input") {
             inputUpdate(node);
         }
     });
-    // now we can do all other kinds of nodes
+    // Continue with updating all other nodes (gates and outputs)
     circuit.nodes.each(function(node) {
         switch (node.category) {
             case "andgate":
@@ -381,6 +517,4 @@ function update() {
                 break;  // doInput already called, above
         }
     });
-    // Setting UndoManager back to initial value
-    circuit.skipsUndoManager = currentUndoManager;
 }
