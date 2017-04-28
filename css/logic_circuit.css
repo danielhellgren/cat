@@ -1,32 +1,22 @@
 #logicDiagram {
-    height: 500px;
     background-color: #CEBEBE;
     border: solid 1px black;
 }
 
-#gateMenu {
-    height: 390px;
-    width: 160px;
+.col-md-2 {
+    height: 100%;
 }
 
-#ioMenu {
-    height: 390px;
-    width: 160px;
-}
-
-button {
-    display: block;
-    width: 100px;
-    padding: 30px;
-    margin: 5px;
+.col-sm-12 {
+    height: 50%;
 }
 
 #accordion .ui-accordion-content {
-    max-height: 390px;
+    height: 80%;
 }
 
 #accordion .ui-accordion-header {
-    min-width: 232px;
+    max-height: 10%;
 }
 
 #contextMenu {
