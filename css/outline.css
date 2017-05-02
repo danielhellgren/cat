@@ -78,64 +78,6 @@ Nav a:hover,  a:focus{
     color: #f1f1f1;
 }
 
-
 Nav .active {
     color: #f1f1f1;
 }
-
-/*------------------------------------
-            CONTENT
- -------------------------------------*/
-
-main .content {
-    overflow: scroll;
-    overflow-x: hidden;
-    margin-left: 15%;
-    padding-left: 3%;
-    padding-top: 3%;
-    padding-right: 3%;
-    margin-top: 7%;
-    padding-bottom: 3%;
-
-}
-
-main .content h1 {
-    font-size: 150%;
-    margin: 1%;
-    padding-top: 1%;
-}
-
-main .content p {
-    padding: 5px;
-}
-
-main .content img {
-    width: 95%;
-    padding-left: 3%;
-    padding-top: 2%;
-
-}
-
-/*
-            -TEXT1-
-*/
-
-main .content .text1 {
-    display: inline-block;
-    float: left;
-    width: 50%;
-}
-
-/*
-            -TEXT2-
-*/
-
-main .content .text2 {
-    display: inline-block;
-    float: right;
-    width: 50%;
-}
-
-
-
-
