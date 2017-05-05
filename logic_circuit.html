@@ -16,6 +16,7 @@
     <!-- Local files -->
     <script src="javascript/go-watermark.js"></script>
     <script src="javascript/logic_circuit.js"></script>
+    <script src="javascript/circuit_tutorial.js"></script>
     <link href="css/logic_circuit.css" rel="stylesheet" type="text/css">
     <script>
         docLoaded(indexPageLoaded);
@@ -23,34 +24,50 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="height: 500px">
-        <div class="row" style="height: 100%">
-            <div class="col-md-2 col-sm-12">
-                <div class="row" style="height: 100%">
-                    <div id="accordion" class="col-md-12" style="height: 100%">
-                        <h3>Logic Gates</h3>
-                        <div>
-                            <div id="gateMenu" style="height: 100%"></div>
-                        </div>
-                        <h3>Input/Output</h3>
-                        <div>
-                            <div id="ioMenu" style="height: 100%"></div>
-                        </div>
+<div class="container-fluid" style="height: 600px">
+    <div class="row" style="height: 60%">
+        <div class="col-sm-4" style="height: 100%; padding: 2%; text-align: center">
+            <div id="ANDtutorial" style="height: 100%"></div>
+            <p>AND gate test tutorial</p>
+        </div>
+        <div class="col-sm-4" style="height: 100%; padding: 2%; text-align: center">
+            <div id="ORtutorial" style="height: 100%"></div>
+            <p>OR gate test tutorial</p>
+        </div>
+        <div class="col-sm-4" style="height: 100%; padding: 2%; text-align: center">
+            <div id="NOTtutorial" style="height: 100%"></div>
+            <p>NOT gate test tutorial</p>
+        </div>
+    </div>
+    <div class="row" style="height: 100%">
+        <div class="col-md-2">
+            <div class="row" style="height: 100%">
+                <div id="accordion" class="col-md-12" style="height: 100%">
+                    <h3>Logic Gates</h3>
+                    <div>
+                        <div id="gateMenu" style="height: 100%"></div>
+                    </div>
+                    <h3>Input/Output</h3>
+                    <div>
+                        <div id="ioMenu" style="height: 100%"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-10" style="height: 100%; position: relative">
-                <div id="logicDiagram" style="height: 100%"></div>
-                <div id="contextMenu">
-                    <ul>
-                        <li id="copy"><a href="#" target="_self">Copy (Ctrl+C)</a></li>
-                        <li id="cut"><a href="#" target="_self">Cut (Ctrl+X)</a></li>
-                        <li id="paste"><a href="#" target="_self">Paste (Ctrl+V)</a></li>
-                        <li id="delete"><a href="#" target="_self">Delete (Backspace)</a></li>
-                    </ul>
-                </div>
+        </div>
+        <div class="col-md-10" style="height: 100%; position: relative">
+            <div id="logicDiagram" style="height: 100%"></div>
+            <div id="contextMenu">
+                <ul>
+                    <li id="undo"><a href="#" target="_self">Undo (Ctrl+Z)</a></li>
+                    <li id="redo"><a href="#" target="_self">Redo (Ctrl+Y)</a></li>
+                    <li id="copy"><a href="#" target="_self">Copy (Ctrl+C)</a></li>
+                    <li id="cut"><a href="#" target="_self">Cut (Ctrl+X)</a></li>
+                    <li id="paste"><a href="#" target="_self">Paste (Ctrl+V)</a></li>
+                    <li id="delete"><a href="#" target="_self">Delete (Backspace)</a></li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
