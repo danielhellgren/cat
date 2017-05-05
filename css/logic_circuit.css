@@ -1,18 +1,73 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .col-md-2{
+        height: 100%;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-md-2{
+        height: 100%;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
 #logicDiagram {
     background-color: #CEBEBE;
     border: solid 1px black;
 }
 
-.col-md-2 {
-    height: 100%;
+#ANDtutorial {
+    background-color: #CEBEBE;
+    border: solid 1px black;
 }
 
-.col-sm-12 {
-    height: 50%;
+#ORtutorial {
+    background-color: #CEBEBE;
+    border: solid 1px black;
+}
+
+#NOTtutorial{
+    background-color: #CEBEBE;
+    border: solid 1px black;
 }
 
 #accordion .ui-accordion-content {
     height: 80%;
+    text-align: center;
 }
 
 #accordion .ui-accordion-header {
