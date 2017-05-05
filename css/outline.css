@@ -81,3 +81,25 @@ Nav a:hover,  a:focus{
 Nav .active {
     color: #f1f1f1;
 }
+
+main .content {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 15%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    margin-top: 7%;
+    padding-bottom: 3%;
+
+}
+
+main .content h1 {
+    font-size: 150%;
+    margin: 1%;
+    padding-top: 1%;
+}
+
+main .content p {
+    padding: 5px;
+}
