@@ -127,3 +127,22 @@
     margin-left: 0;
     margin-top: 0;
 }
+
+#infoContainer {
+    z-index: 300;
+    position: absolute;
+    left: 5px;
+}
+
+#infoBox {
+    border: 1px solid #999;
+    padding: 8px;
+    background-color: ghostwhite;
+    opacity:0.9;
+    position: relative;
+    width: 170px;
+    //height: 60px;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+}

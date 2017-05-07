@@ -48,6 +48,251 @@ function initTutorial() {
             MAKE(go.Shape,
                 { name: "linkShape", strokeWidth: 4, stroke: "green", contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)}));
 
+    andGate =
+        MAKE(go.Node, "Spot",
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal),
+            },
+            new go.Binding("isShadowed", "isSelected").ofObject(),
+            new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+            MAKE(go.Shape, "AndGate",
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape",
+                    mouseEnter: showInfo,
+                    mouseLeave: hideInfo
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input1",
+                    alignment: new go.Spot(0, 0.25),
+                    toMaxLinks: 1,
+                    cursor: "pointer"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input2",
+                    alignment: new go.Spot(0, 0.75),
+                    toMaxLinks: 1,
+                    cursor: "pointer"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: true,
+                    toSpot: go.Spot.Left,
+                    toLinkable: false,
+                    portId: "Output",
+                    alignment: new go.Spot(1, 0.5),
+                    toMaxLinks: 1,
+                    cursor: "pointer"
+                }
+            )
+        );
+
+    notGate =
+        MAKE(go.Node, "Spot",
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
+            new go.Binding("isShadowed", "isSelected").ofObject(),
+            new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+            MAKE(go.Shape, "Inverter",
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape",
+                    mouseEnter: showInfo,
+                    mouseLeave: hideInfo
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input",
+                    alignment: new go.Spot(0, 0.5),
+                    cursor: "pointer"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: true,
+                    toSpot: go.Spot.Left,
+                    toLinkable: false,
+                    portId: "Output",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
+                }
+            )
+        );
+
+    orGate =
+        MAKE(go.Node, "Spot",
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
+            new go.Binding("isShadowed", "isSelected").ofObject(),
+            new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+            MAKE(go.Shape, "OrGate",
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape",
+                    mouseEnter: showInfo,
+                    mouseLeave: hideInfo
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input1",
+                    alignment: new go.Spot(0.17, 0.3),
+                    cursor: "pointer"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Input2",
+                    alignment: new go.Spot(0.17, 0.7),
+                    cursor: "pointer"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: true,
+                    toSpot: go.Spot.Left,
+                    toLinkable: false,
+                    portId: "Output",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
+                }
+            )
+        );
+
+    input =
+        MAKE(go.Node, "Spot",
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
+            new go.Binding("isShadowed", "isSelected").ofObject(),
+            new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape",
+                    mouseEnter: showInfo,
+                    mouseLeave: hideInfo
+                }
+            ),
+            MAKE(go.Shape, "Circle",
+                {   fill: "green",
+                    desiredSize: new go.Size(75,75),
+                    name: "inputShape"
+                }
+            ),
+            MAKE(go.TextBlock,
+                {textAlign: "center"}
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: true,
+                    toSpot: go.Spot.Left,
+                    toLinkable: false,
+                    portId: "Input",
+                    alignment: new go.Spot(1, 0.5),
+                    cursor: "pointer"
+                }
+            ),
+            {doubleClick: function (e, obj) {inputState(e, obj)}}
+        );
+
+    output =
+        MAKE(go.Node, "Spot",
+            {   shadowBlur: 20,
+                shadowColor: "black",
+                selectionAdorned: false,
+                shadowOffset: new go.Point(0, 0),
+                contextMenu: MAKE(go.Adornment, go.Panel.Horizontal)
+            },
+            new go.Binding("isShadowed", "isSelected").ofObject(),
+            new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+            MAKE(go.Shape, "Circle",
+                {   fill: "lightgray",
+                    stroke: "black",
+                    strokeWidth: 3,
+                    name: "nodeShape",
+                    mouseEnter: showInfo,
+                    mouseLeave: hideInfo
+                }
+            ),
+            MAKE(go.Shape, "Circle",
+                {   fill: "green",
+                    desiredSize: new go.Size(75,75),
+                    name: "outputShape"
+                }
+            ),
+            MAKE(go.Shape, "Rectangle",
+                {   fill: "black",
+                    desiredSize: new go.Size(8,8),
+                    fromSpot: go.Spot.Right,
+                    fromLinkable: false,
+                    toSpot: go.Spot.Left,
+                    toLinkable: true,
+                    portId: "Output",
+                    alignment: new go.Spot(0, 0.5),
+                    cursor: "pointer"
+                }
+            )
+        );
+
+
     ANDtutorial = tutorialAND;
     NOTtutorial = tutorialNOT;
     ORtutorial = tutorialOR;
@@ -64,10 +309,65 @@ function initTutorial() {
     NOTtutorial.nodeTemplateMap = menuMap;
     ORtutorial.nodeTemplateMap = menuMap;
 
-    load();
+    loadTutorials();
 }
 
-function load() {
+function showInfo (inputEvent, graphObject) {
+    if (graphObject !== null) {
+        var node = graphObject.part;
+        //var e = inputEvent.diagram.lastInput;
+        var e = inputEvent;
+        console.log(inputEvent.diagram);
+        console.log(e);
+        var shape = node.findObject("nodeShape");
+        shape.stroke = "gray";
+        node.isShadowed = true;
+        node.shadowOffset = new go.Point(0, 0);
+        updateInfoBox(e.viewPoint, node.data);
+        document.getElementById("infoContainer").style.display = "block";
+    }
+    else {
+        document.getElementById("infoContainer").innerHTML = "";
+    }
+}
+
+function hideInfo (inputEvent, graphObject) {
+    graphObject.part.findObject("nodeShape").stroke = "black";
+    graphObject.part.isShadowed = false;
+    document.getElementById("infoContainer").style.display = "none";
+}
+
+function updateInfoBox(mousePt, data) {
+    console.log(data);
+    var boxContainer = document.getElementById("infoContainer");
+    boxContainer.innerHTML = "";
+    var infoBox = document.createElement("div");
+    infoBox.id = "infoBox";
+    boxContainer.appendChild(infoBox);
+    var content = document.createElement("div");
+    switch(data.category) {
+        case "andgate":
+            content.textContent = "AND gate";
+            break;
+        case "orgate":
+            content.textContent = "OR gate";
+            break;
+        case "notgate":
+            content.textContent = "NOT gate";
+            break;
+        case "input":
+            content.textContent = "Input";
+            break;
+        case "output":
+            content.textContent = "Output";
+            break;
+    }
+    infoBox.appendChild(content);
+    boxContainer.style.left = mousePt.x + 30 + "px";
+    boxContainer.style.top = mousePt.y + 30 + "px";
+}
+
+function loadTutorials() {
     ANDtutorial.model = go.Model.fromJson(ANDtemplate);
     ANDtutorial.model.linkFromPortIdProperty = "fromPort";
     ANDtutorial.model.linkToPortIdProperty = "toPort";

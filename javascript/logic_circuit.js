@@ -12,11 +12,6 @@ function indexPageLoaded() {
 }
 
 var myContextMenu;
-var andGate;
-var orGate;
-var notGate;
-var input;
-var output;
 
 function initCircuit() {
     /*
@@ -345,13 +340,14 @@ function initCircuit() {
             MAKE(go.Shape, "Rectangle",
                 {   fill: "lightgray",
                     stroke: "black",
-                    strokeWidth: 3
+                    strokeWidth: 3,
+                    name: "nodeShape"
                 }
             ),
             MAKE(go.Shape, "Circle",
                 {   fill: "green",
                     desiredSize: new go.Size(75,75),
-                    name: "nodeShape"
+                    name: "inputShape"
                 }
             ),
             MAKE(go.TextBlock,
@@ -385,13 +381,14 @@ function initCircuit() {
             MAKE(go.Shape, "Circle",
                 {   fill: "lightgray",
                     stroke: "black",
-                    strokeWidth: 3
+                    strokeWidth: 3,
+                    name: "nodeShape"
                 }
             ),
             MAKE(go.Shape, "Circle",
                 {   fill: "green",
                     desiredSize: new go.Size(75,75),
-                    name: "nodeShape"
+                    name: "outputShape"
                 }
             ),
             MAKE(go.Shape, "Rectangle",
@@ -459,20 +456,6 @@ function initCircuit() {
         heightStyle: "content"
     });
 
-    function inputState(e, node) {
-        // Wrapping the state change in a transaction for undo/redo
-        e.diagram.startTransaction("setInputState");
-        // Search for input object with name property "nodeShape" and returns that object, making it possible to update its fill color
-        console.log(node.findObject("nodeShape").fill);
-        node.findObject("nodeShape").fill = (node.findObject("nodeShape").fill == "#00ff00") ? "green" : "#00ff00";
-        // Since an input's state may have changed (indicated by a color change) it's necessary to update all nodes/links
-        update();
-        console.log("Input state updated!");
-        console.log(node.findObject("nodeShape").fill);
-        // Closing transaction
-        e.diagram.commitTransaction("setInputState");
-    }
-
     // Updating circuit state
     continueUpdate();
 }
@@ -483,11 +466,25 @@ function continueUpdate() {
     console.log("Updating");
 }
 
+function inputState(e, node) {
+    // Wrapping the state change in a transaction for undo/redo
+    e.diagram.startTransaction("setInputState");
+    // Search for input object with name property "nodeShape" and returns that object, making it possible to update its fill color
+    console.log(node.findObject("inputShape").fill);
+    node.findObject("inputShape").fill = (node.findObject("inputShape").fill == "#00ff00") ? "green" : "#00ff00";
+    // Since an input's state may have changed (indicated by a color change) it's necessary to update all nodes/links
+    update();
+    console.log("Input state updated!");
+    console.log(node.findObject("inputShape").fill);
+    // Closing transaction
+    e.diagram.commitTransaction("setInputState");
+}
+
 // These are just auxiliary functions to update all gates and IO based on the color of the links
 // "green" indicates a low signal (0) and "#00ff00" (light green) indicates a high signal (1)
 
 function inputUpdate(node) {
-    setOutputLinks(node, node.findObject("nodeShape").fill);
+    setOutputLinks(node, node.findObject("inputShape").fill);
 }
 
 function andUpdate(node) {
@@ -506,7 +503,7 @@ function orUpdate(node) {
 }
 
 function outputUpdate(node) {
-    node.linksConnected.each(function(link) { node.findObject("nodeShape").fill = link.findObject("linkShape").stroke; });
+    node.linksConnected.each(function(link) { node.findObject("outputShape").fill = link.findObject("linkShape").stroke; });
 }
 
 function linkIsTrue(link) {  // assume the given Link has a Shape named "linkShape"
