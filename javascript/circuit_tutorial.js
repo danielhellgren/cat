@@ -8,8 +8,8 @@ function initTutorial() {
         MAKE(go.Diagram, "ANDtutorial", // Specify the diagram by using the HTML div's ID
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
-                initialAutoScale: go.Diagram.Uniform,
-                initialContentAlignment: go.Spot.Center,
+                autoScale: go.Diagram.Uniform,
+                contentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
@@ -19,8 +19,8 @@ function initTutorial() {
         MAKE(go.Diagram, "ORtutorial", // Specify the diagram by using the HTML div's ID
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
-                initialAutoScale: go.Diagram.Uniform,
-                initialContentAlignment: go.Spot.Center,
+                autoScale: go.Diagram.Uniform,
+                contentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
@@ -30,8 +30,8 @@ function initTutorial() {
         MAKE(go.Diagram, "NOTtutorial", // Specify the diagram by using the HTML div's ID
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
-                initialAutoScale: go.Diagram.Uniform,
-                initialContentAlignment: go.Spot.Center,
+                autoScale: go.Diagram.Uniform,
+                contentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
