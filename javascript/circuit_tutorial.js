@@ -9,6 +9,7 @@ function initTutorial() {
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
                 initialAutoScale: go.Diagram.Uniform,
+                initialContentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
@@ -19,6 +20,7 @@ function initTutorial() {
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
                 initialAutoScale: go.Diagram.Uniform,
+                initialContentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
@@ -29,6 +31,7 @@ function initTutorial() {
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
                 initialAutoScale: go.Diagram.Uniform,
+                initialContentAlignment: go.Spot.Center,
                 isReadOnly: true,
                 allowHorizontalScroll: false,
                 allowVerticalScroll: false
@@ -313,33 +316,48 @@ function initTutorial() {
 }
 
 function showInfo (inputEvent, graphObject) {
+    var i;
+    var activeDiagram = inputEvent.diagram.div.id;
+    switch (activeDiagram) {
+        case "ANDtutorial":
+            i = 0;
+            break;
+        case "ORtutorial":
+            i = 1;
+            break;
+        case "NOTtutorial":
+            i = 2;
+            break;
+    }
     if (graphObject !== null) {
         var node = graphObject.part;
-        //var e = inputEvent.diagram.lastInput;
-        var e = inputEvent;
+        var e = inputEvent.diagram.lastInput;
+        console.log(inputEvent.diagram.div.id);
         console.log(inputEvent.diagram);
         console.log(e);
         var shape = node.findObject("nodeShape");
         shape.stroke = "gray";
         node.isShadowed = true;
         node.shadowOffset = new go.Point(0, 0);
-        updateInfoBox(e.viewPoint, node.data);
-        document.getElementById("infoContainer").style.display = "block";
+        updateInfoBox(e.viewPoint, node.data, i);
+        document.getElementsByClassName("infoContainer")[i].style.display = "block";
     }
     else {
-        document.getElementById("infoContainer").innerHTML = "";
+        document.getElementsByClassName("infoContainer")[i].innerHTML = "";
     }
 }
 
 function hideInfo (inputEvent, graphObject) {
     graphObject.part.findObject("nodeShape").stroke = "black";
     graphObject.part.isShadowed = false;
-    document.getElementById("infoContainer").style.display = "none";
+    document.getElementsByClassName("infoContainer")[0].style.display = "none";
+    document.getElementsByClassName("infoContainer")[1].style.display = "none";
+    document.getElementsByClassName("infoContainer")[2].style.display = "none";
 }
 
-function updateInfoBox(mousePt, data) {
+function updateInfoBox(mousePt, data, i) {
     console.log(data);
-    var boxContainer = document.getElementById("infoContainer");
+    var boxContainer = document.getElementsByClassName("infoContainer")[i];
     boxContainer.innerHTML = "";
     var infoBox = document.createElement("div");
     infoBox.id = "infoBox";
@@ -388,7 +406,7 @@ var ANDtemplate = {
     "nodeDataArray": [
         {"category":"input", "key":"in1", "loc":"0 0"},
         {"category":"input", "key":"in2", "loc":"0 150"},
-        {"category":"andgate", "key":"and", "loc": "130 75"},
+        {"category":"andgate", "key":"and", "loc": "150 75"},
         {"category":"output", "key":"out", "loc":"300 75"}
     ],
     "linkDataArray": [
@@ -402,7 +420,7 @@ var ORtemplate = {
     "nodeDataArray": [
         {"category":"input", "key":"in1", "loc":"0 0"},
         {"category":"input", "key":"in2", "loc":"0 150"},
-        {"category":"orgate", "key":"or", "loc": "130 75"},
+        {"category":"orgate", "key":"or", "loc": "150 75"},
         {"category":"output", "key":"out", "loc":"300 75"}
     ],
     "linkDataArray": [
@@ -414,8 +432,8 @@ var ORtemplate = {
 
 var NOTtemplate = {
     "nodeDataArray": [
-        {"category":"input", "key":"in", "loc":"0 0"},
-        {"category":"notgate", "key":"not", "loc": "130 75"},
+        {"category":"input", "key":"in", "loc":"0 75"},
+        {"category":"notgate", "key":"not", "loc": "150 75"},
         {"category":"output", "key":"out", "loc":"300 75"}
     ],
     "linkDataArray": [
