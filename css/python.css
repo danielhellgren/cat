@@ -1,11 +1,80 @@
+/*
+---------------GENERAL--------------------
+ */
 
- .code {
+.content {
+ text-align: center;
+}
+
+
+/*
+ -------------CODE TUTORIALS-----------------
+*/
+
+.code1 {
     font-family: Andale Mono, monospace;
-     margin: 1%;
+     margin-left: 30%;
+     margin-right: 30%;
      padding: 1%;
      border: #020202;
      border-style: solid;
      width: 40%;
+     text-align: center;
+
+}
+ .code2 {
+  font-family: Andale Mono, monospace;
+  padding: 1%;
+  border: #020202;
+  border-style: solid;
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 2%;
+ }
+
+
+.result-btn {
+ background-color: white;
+ color: black;
+ border: 2px solid #555555;
+ margin-left: 43%;
+ margin-right: 43%;
+ width: 14%;
+ text-align: center;
+ margin-top: 2%;
+ margin-bottom: 2%;
 }
 
+.result-btn:hover {
+ background-color: #555555;
+ color: white;
+}
 
+.result-btn:active {
+ background-color: #555555;
+ color: white;
+}
+
+ .result-btn:focus {outline:0;}
+
+/*
+-------------FORM-----------------
+*/
+
+form {
+ margin-top: 2%;
+ margin-bottom: 2%;
+ width: 40%;
+ margin-left: 30%;
+ margin-right: 30%;
+ text-align: center;
+}
+
+form input {
+ margin: 2%;
+ width: 40%;
+}
+
+form input:focus {outline:0;}
