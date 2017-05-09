@@ -99,6 +99,10 @@
     max-height: 10%;
 }
 
+.no-padding{
+    padding: 0;
+}
+
 #contextMenu {
     z-index: 300;
     position: absolute;
