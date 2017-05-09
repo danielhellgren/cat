@@ -40,8 +40,7 @@ function initCircuit() {
             {
                 "undoManager.isEnabled": true, // Used for allowing undo/redo
                 allowDrop: true, // Allowing nodes to be dropped on the diagram from menu
-                autoScale: go.Diagram.Uniform,
-                contentAlignment: go.Spot.Center
+                autoScale: go.Diagram.Uniform
             });
 
     //circuit.model = MAKE(go.Model);
@@ -423,7 +422,7 @@ function initCircuit() {
             { // share the templates with the main Diagram
                 nodeTemplateMap: menuMap,
                 layout: MAKE(go.GridLayout),
-                contentAlignment: go.Spot.Center,
+                contentAlignment: go.Spot.Top,
                 autoScale: go.Diagram.Uniform
             });
 
