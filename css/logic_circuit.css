@@ -258,10 +258,11 @@ Header img{
     position: absolute;
     background-color: #CEBEBE;
     width: 70vw;
-    height: 70vh;
+    height: 75vh;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 500 !important;
+    border-bottom-right-radius: 6px;
 }
 
 .dropdowncontent ul {
@@ -291,7 +292,19 @@ Header img{
 
 #dropdown li:hover {background-color: gray}
 
-.show {display:block;}
+.animateMenu{
+    position:relative;
+    animation:animatetop 0.4s
+}
+
+@keyframes animatetop{
+    0%{top:0;opacity:0}
+    100%{top:0;opacity:1}
+}
+
+.show {
+    display:block;
+}
 
 Header h1{
     font-size: 250%;
