@@ -18,7 +18,6 @@
     <script src="javascript/logic_circuit.js"></script>
     <script src="javascript/circuit_tutorial.js"></script>
     <link href="css/logic_circuit.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <script>
         docLoaded(indexPageLoaded);
     </script>
@@ -26,18 +25,38 @@
 
 <body>
 <main>
+    <header>
+        <div class="mobile-menu-wrapper">
+            <div id="mobile-menu">
+                <div id="cont" style="display: inline-block">
+                    <div class="bar1" style="margin-left: auto; margin-right: auto"></div>
+                    <div class="bar2" style="margin-left: auto; margin-right: auto"></div>
+                    <div class="bar3" style="margin-left: auto; margin-right: auto"></div>
+                </div>
+            </div>
+            <div id="dropdown" class="dropdowncontent">
+                <ul>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="logic_circuit.html" class="active">Logisim</a></li>
+                    <li><a href="binary.html">Binary numbers</a></li>
+                    <li><a href="python.html">Python</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="header-text">
+            <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
+            <h1>Curious About IT</h1>
+        </div>
+    </header>
+
     <nav>
         <a href="index.html">Index</a>
         <a href="logic_circuit.html" class="active">Logisim</a>
         <a href="binary.html">Binary numbers</a>
         <a href="python.html">Python</a>
     </nav>
-    <header>
-        <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
-        <h1>Curious About IT</h1>
-    </header>
 
-    <div class="content" style="height: 100%">
+    <div class="content" style="position: fixed">
     <div class="container-fluid" style="height: 100%; width: 100%">
         <div class="row">
             <div class="col-md-12">
@@ -47,7 +66,7 @@
                 </p>
             </div>
         </div>
-        <div class="row" style="height: 60%">
+        <div class="row" style="height: 70%">
             <div class="col-md-12 col-centered" style="height: 100%; padding: 2%; text-align: center">
                 <div id="ANDtutorial" style="height: 100%"></div>
                 <div class="infoContainer"></div>
@@ -61,7 +80,7 @@
                 </p>
             </div>
         </div>
-        <div class="row" style="height: 60%">
+        <div class="row" style="height: 70%">
             <div class="col-md-12 col-centered" style="height: 100%; padding: 2%; text-align: center">
                 <div id="ORtutorial" style="height: 100%"></div>
                 <div class="infoContainer"></div>
@@ -75,7 +94,7 @@
                 </p>
             </div>
         </div>
-        <div class="row" style="height: 60%">
+        <div class="row" style="height: 70%">
             <div class="col-md-12 col-centered" style="height: 100%; padding: 2%; text-align: center">
                 <div id="NOTtutorial" style="height: 100%"></div>
                 <div class="infoContainer"></div>
@@ -89,13 +108,13 @@
                 </p>
             </div>
         </div>
-        <div class="row" style="height: 80%; padding: 1%">
+        <div class="row" style="height: 100%; padding: 1%">
             <div class="col-md-2">
                 <div class="row" style="height: 100%">
-                    <div id="accordion" class="col-md-12" style="height: 100%">
+                    <div id="accordion" class="col-md-12 no-padding" style="height: 100%;">
                         <h3>Logic Gates</h3>
                         <div>
-                            <div id="gateMenu" style="height: 100%"></div>
+                            <div id="gateMenu" style="height: 100%; width: 100%"></div>
                         </div>
                         <h3>Input/Output</h3>
                         <div>
@@ -120,6 +139,7 @@
         </div>
     </div>
     </div>
+    <div id="content-cover" style="position: fixed"></div>
 </main>
 </body>
 </html>

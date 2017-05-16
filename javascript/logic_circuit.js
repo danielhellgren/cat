@@ -32,6 +32,38 @@ function initCircuit() {
     document.getElementById("delete").addEventListener("click", function() {menuHandle("delete")});
     document.getElementById("undo").addEventListener("click", function() {menuHandle("undo")});
     document.getElementById("redo").addEventListener("click", function() {menuHandle("redo")});
+    document.getElementById("mobile-menu").addEventListener("click", function() {
+        this.classList.toggle("change");
+        var dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("show");
+        if (dropdown.classList.contains("show")) {
+            console.log(document.getElementsByClassName("content")[0]);
+            document.getElementsByClassName("content")[0].style.zIndex = "-1";
+            document.getElementById("content-cover").style.display = "inline-block";
+            document.getElementById("content-cover").style.zIndex = "-1";
+        }
+        else {
+            document.getElementsByClassName("content")[0].style.zIndex = "";
+            document.getElementById("content-cover").style.display = "none";
+        }
+    });
+/*
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('#mobile-menu')) {
+            var dropdowns = document.getElementsByClassName("dropdowncontent");
+            var menuStatus = document.getElementById("mobile-menu");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    menuStatus.classList.remove("change");
+                    console.log(openDropdown.classList);
+                }
+            }
+        }
+    };*/
 
     // Create empty diagram (this is the base)
     var MAKE = go.GraphObject.make;
