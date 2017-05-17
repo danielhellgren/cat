@@ -30,7 +30,7 @@ var lexicon;
  */
 $(document).ready(function() {
     // load lexicon
-    $.getJSON("./language.json", function(data) {
+    $.getJSON("./resources/lexicon.json", function(data) {
         lexicon = data;
         // console.log(lexicon);
         translateText();

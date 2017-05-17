@@ -1,4 +1,56 @@
 {
+  "language-of-the-machines-title":{
+    "en":"\"The Language of the Machines\"",
+    "se":"\"Maskinernas språk\""
+  },
+  "language-of-the-machines-text":{
+    "en":"You have probably already heard of binary and it being \"the language of the machines\". But do you know what it is and how it works?<br><br> Computers run on electricity and inside the circuits a wire can either have current flowing through it -  ON. Or it can have no current flowing through it - OFF. These two states are represented by the numbers 1 and 0 - binary.<br><br> Before exploring binary further it is good to understand our standard numerical system based on the number ten - decimal.",
+    "se":"Du har förmodligen redan hört talas om binära tal och att det är \"Maskinernas språk\". Men vet du vad det är och hur det fungerar?<br><br>Datorer drivs av elekrticitet och inuti kretsarna kan det antingen flöda ström - PÅ. Eller så kan det inte flöda ström genom kretsarna - AV. Dessa två lägen kan representeras av nummren 1 och 0 - binärt.<br><br>Men först är det bra att förstå hur vårt standard numeriska system fungerar, baserat på talet tio - decimala tal"
+  },
+  "decimal-title":{
+    "en":"Decimal - base ten",
+    "se":"Decimaltal - bas tio"
+  },
+  "decimal-text":{
+    "en":"Normally, we use TEN symbols to represent ALL numbers:<br><br>0 1 2 3 4 5 6 7 8 9 <br><br>So we can count up to nine before we run out of symbols to use. Instead of adding another symbol for higher numbers, which would lead to a huge amount of symbols to remember. We add reuse the same symbols via the Positional Notation System - INSERT REF. So when we arrive at the end of our symbols - 9, we have to add a digit to the left and start over from 0 - 10.<br> Meaning if you look at a single symbol in a number of base ten that digit is ten times the size of it's neighbour to the right.<br><br> The number 1,329,354 represents:<br><br> 1x1,000,000 + 3x100,000 + 2x10,000 + 9x1,000 + 3x100 + 5x10 + 4x1",
+    "se":"Normalt sätt, använder vi TIO symboler för att representera ALLA tal:<br><br>0 1 2 3 4 5 6 7 8 9 <br><br> Alltså kan vi räkna upp till nio innan vi har slut på symboler. Istället ör att skapa nya symboler för högre tal, vilket hade lett till orimligt mång att lägga på minnet. Så använder vi samma symboler via Positionssystemet - REF HÄR. När vi kommer till slutat av våra symboler - 9, så lägger vi till en siffra till vänster om nuvarande och börjar om från noll (10).<br>Detta betyder att en symbol i ett tal är värt 10 gånger mer än sin granne till höger.<br><br> Nummret 1,329,354 representerar:<br><br>1x1,000,000 + 3x100,000 + 2x10,000 + 9x1,000 + 3x100 + 5x10 + 4x1"
+  },
+  "binary-title":{
+    "en":"Binary - base two",
+    "se":"Binära tal - bas två"
+  },
+  "binary-text":{
+    "en":"Now that we have a clear view of decimal it is time to look at binary. Binary works the same way as decimal only it is using the number 2 as the base. So we have TWO symbols to represent ALL numbers:<br><br>1 0<br><br>In the same way we have to add a digit to the left and start from zero once we reach the end of our symbols. And that means every digit has double the value of it's neighbour to the right.<br><br>So the number 10101101, represents:<br><br>1x128 + 0x64 + 1x32 + 0x16 + 1x8 + 1x4 + 0x2 + 1x1 = 173 (decimal) <br><br>",
+    "se":"Nu när vi har klart för oss hur decimaltal fungerar så kan vi gå vidare till binära tal. Bionära tal fungerar precis på samma sätt som decimaltal bara att bas talet är 2. Alltså har vi TWO symboler som representerar ALLA tal:<br><br>1 0<br><br>På samma sätt lägger vi till en 1 till vänster och börjar om från noll när symbolerna tagit slut. Och det betyder att symbolerna i ett tal är värda dubbelt så mycket som sin högra granne. Talet 10101101 representerar:<br><br> 1x128 + 0x64 + 1x32 + 0x16 + 1x8 + 1x4 + 0x2 + 1x1 = 173 (i bas tio) <br><br>"
+  },
+  "intro-text":{
+    "en":"IT is a part of people's work and leisure. Do you want to understand how information technology functions, to influence the development and create tomorrow's technology? As an engineer from the IT program in Uppsala, you can work with information that is important to people in all of life's stages, for the functioning of society and the competitiveness of businesses.",
+    "se":"IT genomsyrar människors arbete och fritid. Vill du förstå hur informationsteknologi ­fungerar, påverka utvecklingen och skapa morgondagens teknik? Som civilingenjör från IT-programmet i Uppsala kan du jobba med uppgifter som är betydelsefulla för människor i livets alla stadier, för samhällets funktion och för företagens konkurrenskraft."
+  },
+  "about-program-title":{
+    "en":"About the program",
+    "se":"Om Programmet"
+  },
+  "about-program-text":{
+    "en":"Master programme in computer and information engineering generates sustainable education with knowledge that lasts longer. People, mathematics and programming are key ingredients in education. Theory and practice, often in project form, gives you skills you can use both for today’s and tomorrow's system. You will learn what you need to develop future counterparts to Google,  Skype or iPhone. Or maybe develop prostheses with built-in computers or easy to use computers that never crashes?",
+    "se":"Civilingenjörsprogrammet i informationsteknologi ger en hållbar utbildning med kunskaper som räcker länge. Människor, matematik och programmering är viktiga ingredienser i utbildningen. Teori och praktik, ofta i projektform, ger dig helhetsperspektiv och färdigheter du kan använda både för dagens och morgondagens system. Du får lära dig vad som behövs för att utveckla framtidens motsvarigheter till Google, Skype eller iPhone. Eller kanske utveckla proteser med inbyggda datorer eller lättanvända datorer som aldrig kraschar?"
+  },
+  "degree-title":{
+    "en":"Degree",
+    "se":"Examen"
+  },
+  "degree-text":{
+    "en":"The program leads to an engineering degree, which is a professional degree.",
+    "se":"Utbildningen leder till en civilingenjörsexamen, vilket är en yrkesexamen."
+  },
+  "about-education-title":{
+    "en":"About the Education",
+    "se":"Om Utbildningen"
+  },
+  "about-education-text":{
+    "en":"Teaching has a strong connection to the university's outstanding research in information technology. Many of the courses are characterized by innovative teaching and exam forms based on scientific anchored education. Many of the teachers have received awards for their educational teaching.<br><br> The courses are often implemented in projects in preparation for working life. Several of the projects are conducted in collaboration with students in other countries. The program concludes with a greater applied projects on a full or half semester. You work independently and creatively in an internationally oriented environment. The program is offered in Uppsala.",
+    "se":"Undervisningen har stark koppling till universitetets framstående forskning inom informationsteknologi. Många av kurserna präglas av innovativa undervisnings- och examensformer baserade på vetenskaplig förankrad pedagogik. Flera av lärarna har fått pris för sin pedagogiska undervisning.<br><br>Kurserna genomförs ofta i projektform som en förberedelse för arbetslivet. Flera av projekten sker i samarbete med studenter i andra länder. Programmet avslutas med större tilläm­pade projekt över en hel eller halv termin. Du arbetar självständigt och kreativt i en internationellt präglad miljö. Programmet ges i Uppsala.<br><br>Kurs­litteraturen är mestadels på engelska och i de högre årskurserna är undervisningen ofta på engelska."
+  },
   "":{
     "en":"",
     "se":""

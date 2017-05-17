@@ -15,5 +15,5 @@ function printBinaryResult(){
         }
         textDiv.innerHTML = "" + i;
         i++;
-    }, 500); //repeat every 1 sec
+    }, 500); //repeat every .5 sec
 }
