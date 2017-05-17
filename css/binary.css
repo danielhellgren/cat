@@ -1,0 +1,92 @@
+/*-------------------------------
+            ANIMATION
+---------------------------------- */
+
+
+#binary-animation{
+    /*background: url(../resources/binary_counter.png);*/
+    width: 495px;
+    height: 130px;
+    border:black 1px solid;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+#binary-animation-header{
+    background: url(../resources/binary_counter.png);
+    width: 495px;
+    height: 55px;
+}
+
+.binary-animation-number-slot{
+    background: url(../resources/binary_counter.png);
+    width: 50px;
+    height: 75px;
+    background-position: -10px 87px;
+    margin-left: -2.5px;
+    float: left;
+    /*border:black 1px solid;*/
+}
+
+#binary-animation-result{
+    /*background: url(../resources/binary_counter.png);*/
+    width: 97px;
+    height: 75px;
+    background-position: -390px 170px;
+    font-size: 40px;
+    align-content: center;
+
+}
+
+#binary-animation-result-text{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20%;
+
+}
+
+#binary-animation-x128{
+    margin-left: 7.5px;
+    -webkit-animation: binary-clock 128s steps(2) infinite;
+    animation: binary-clock 128s steps(2) infinite;
+}
+
+#binary-animation-x64{
+    -webkit-animation: binary-clock 64s steps(2) infinite;
+    animation: binary-clock 64s steps(2) infinite;
+}
+
+#binary-animation-x32{
+    -webkit-animation: binary-clock 32s steps(2) infinite;
+    animation: binary-clock 32s steps(2) infinite;
+}
+
+#binary-animation-x16{
+    -webkit-animation: binary-clock 16s steps(2) infinite;
+    animation: binary-clock 16s steps(2) infinite;
+}
+
+#binary-animation-x8{
+    -webkit-animation: binary-clock 8s steps(2) infinite;
+    animation: binary-clock 8s steps(2) infinite;
+}
+
+#binary-animation-x4{
+    -webkit-animation: binary-clock 4s steps(2) infinite;
+    animation: binary-clock 4s steps(2) infinite;
+}
+
+#binary-animation-x2{
+    -webkit-animation: binary-clock 2s steps(2) infinite;
+    animation: binary-clock 2s steps(2) infinite;
+}
+
+#binary-animation-x1{
+    -webkit-animation: binary-clock 1s steps(2) infinite;
+    animation: binary-clock 1s steps(2) infinite;
+}
+
+@-webkit-keyframes binary-clock {
+    from{background-position: -10px 87px;}
+    to { background-position: -105px 87px;}
+}
