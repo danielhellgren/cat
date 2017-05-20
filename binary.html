@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/binary.css"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="javascript/binary.js"></script>
 
+    <script src="javascript/jquery-1.11.0.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="javascript/translator.js"></script>
+    <script src="javascript/binary.js"></script>
     <title>Curious About IT</title>
 </head>
 
@@ -15,62 +17,35 @@
 <main>
     <!--NAVIGATION BAR-->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="logic_circuit.html">Logisim</a>
-        <a href="binary.html" class="active">Binary numbers</a>
-        <a href="python.html">Python</a>
+        <script>
+            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
+            document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
+            document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
+        </script><!--CLOSE SCRIPT - NAVIGATION WITH LANGAUGE SETTING INTACT-->
     </nav>
     <!--HEADER-->
     <header>
+        <script>
+            document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
+        </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
         <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
         <h1>Curious About IT</h1>
     </header>
 
     <div class="content">
         <div class="text1">
-            <h1>"The language of the machines" </h1>
-                <p>
-                    You have probably already heard of binary and it being "the language of the machines".
-                    But do you know what it is and how it works?<br><br>
-                    Computers run on electricity and inside the circuits a wire can
-                    either have current flowing through it -  ON.
-                    Or it can have no current flowing through it - OFF.
-                    These two states are represented by the numbers 1 and 0 - binary.<br><br>
-                    Before exploring binary further it is good to understand our standard numerical
-                    system based on the number ten - decimal.
-                </p>
-            <h1>Decimal - Base ten</h1>
-                <p>
-                    We have TEN symbols to represent ALL numbers:<br><br>
-                     0 1 2 3 4 5 6 7 8 9 <br><br>
-                    So we can count up to nine before we run out of symbols to use.
-                    Instead of adding another symbol for higher numbers,
-                    which would lead to a huge amount of symbols to remember.
-                    We add reuse the same symbols via the Positional Notation System - INSERT REF.
-                    So when we arrive at the end of our symbols - 9,
-                    we have to add a digit to the left and start over from 0 - 10.<br>
-                    Meaning if you look at a single symbol in a number of base ten that digit is ten times
-                    the size of it's neighbour to the right.<br><br>
-                    The number 1,329,354 represents:<br><br>
-                    1x1,000,000 + 3x100,000 + 2x10,000 + 9x1,000 + 3x100 + 5x10 + 4x1
-
-                </p>
-            <h1>Binary - Base two</h1>
-                <p>
-                    Now that we have a clear view of decimal it is time to look at binary.
-                    Binary works the same way as decimal only it is using the number 2 as the base.
-                    So we have TWO symbols to represent ALL numbers:<br><br>
-                    1 0<br><br>
-                    In the same way we have to add a digit to the left and start from
-                    zero once we reach the end of our symbols.
-                    And that means every digit has double the value of it's neighbour to the right.<br><br>
-                    So the number 10101101, represents:<br><br>
-                    1x128 + 0x64 + 1x32 + 0x16 + 1x8 + 1x4 + 0x2 + 1x1 = 173 (decimal) <br><br>
-                </p>
+            <h1 class="text-translate" data-translate-key="language-of-the-machines-title"></h1>
+                <p class="text-translate" data-translate-key="language-of-the-machines-text"></p>
+            <h1 class="text-translate" data-translate-key="decimal-title"></h1>
+                <p class="text-translate" data-translate-key="decimal-text"></p>
+            <h1 class="text-translate" data-translate-key="binary-title"></h1>
+                <p class="text-translate" data-translate-key="binary-text"></p>
 
         </div><!--END TEXT1 DIV-->
         <div class="text2">
             <img alt="pic-IT binary" src="resources/binary.jpg"/>
+            <!--BINARY COUNTER ANIMATION-->
             <div id="binary-animation">
                 <div class="binary-animation-number-slot" id="binary-animation-header"></div>
                 <div class="binary-animation-number-slot" id ="binary-animation-x128"></div>

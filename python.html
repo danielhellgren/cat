@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="javascript/jquery-1.11.0.min.js"></script>
     <script src="javascript/python.js"></script>
+    <script src="javascript/translator.js"></script>
     <script src="javascript/pythonGame.js"></script>
 
 
@@ -19,12 +20,18 @@
 
 <main>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="logic_circuit.html">Logisim</a>
-        <a href="binary.html">Binary numbers</a>
-        <a href="python.html" class="active">Python</a>
+        <script>
+            //            var ref = "index.html";
+            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
+            document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
+            document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
+        </script>
     </nav>
     <header>
+        <script>
+            document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
+        </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
         <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
         <h1>Curious About IT - Python</h1>
     </header>
