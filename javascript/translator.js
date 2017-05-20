@@ -34,7 +34,7 @@ $(document).ready(function() {
         lexicon = data;
         // console.log(lexicon);
         translateText();
-        setLangButtonImage();
+        // setLangButtonImage();
     });
 });
 
@@ -45,6 +45,7 @@ $(document).ready(function() {
 function getText(arg){
     //  console.log(lexicon);
     // if lang is not specifically "en" or "se" - default to english
+    console.log("getText:" + arg + " " + lang);
     if (lang != "en" && lang != "se"){
         lang = "en";
     }
@@ -113,11 +114,11 @@ function translateText(){
     for(var i = 0; i < divs.length; i++){
         var div = divs[i];
         var arg = div.getAttribute("data-translate-key");
-        // alert("translating key:" + arg);
+       console.log("translating key:" + arg);
         div.innerHTML = getText(arg);
     }
-    $('.username-field').attr('placeholder', getText('username'));
-    $('.password-field').attr('placeholder', getText('password'));
+    // $('.username-field').attr('placeholder', getText('username'));
+    // $('.password-field').attr('placeholder', getText('password'));
 }
 
 function getLangSwapImgSrc(){

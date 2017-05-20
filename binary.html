@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/binary.css"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascript/binary.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascript/translator.js"></script>
 
     <title>Curious About IT</title>
@@ -16,10 +16,17 @@
 <main>
     <!--NAVIGATION BAR-->
     <nav>
-        <a href="index.html">Index</a>
-        <a href="logic_circuit.html">Logisim</a>
-        <a href="binary.html" class="active">Binary numbers</a>
-        <a href="python.html">Python</a>
+        <script>
+//            var ref = "index.html";
+            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
+            document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
+            document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
+        </script>
+        <!--<a href="index.html">Index</a>-->
+        <!--<a href="logic_circuit.html">Logisim</a>-->
+        <!--<a href="binary.html" class="active">Binary numbers</a>-->
+        <!--<a href="python.html">Python</a>-->
     </nav>
     <!--HEADER-->
     <header>
