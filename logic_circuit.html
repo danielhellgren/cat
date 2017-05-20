@@ -41,7 +41,6 @@
             <div id="dropdown" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
-                        //            var ref = "index.html";
                         document.write("<li><a href=" + "index.html" + langRef() + ">Index</a></li>");
                         document.write("<li><a href=" + "logic_circuit.html" + langRef() + ">Logisim</a></li>");
                         document.write("<li><a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a></li>");
@@ -54,7 +53,7 @@
         <div id="header-text">
             <script>
                 document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
-            </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
+            </script> <!--CLOSE SCRIPT CHANGE LANGUAGE-->
             <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
             <h1>Curious About IT</h1>
 
@@ -76,24 +75,23 @@
         <div class="container-fluid" style="height: 100%; width: 100%">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>
-                        Logic Gates - An Introduction
+                    <h1 class="text-translate" data-translate-key="gates-intro-title">
+                        <!--Logic Gates - An Introduction-->
                     </h1>
-                    <p>
-                        Digital logic gates are the basic building blocks from which all digital systems are constructed from.
-                        They are small electronic circuits, each having one or more than one input and only one output.
-                        The relationship between the input and the output is based on a certain logic, called <a href="https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm">Boolean algebra</a>.
-                        Logic gates simply performs these Boolean algebraic operations of AND, OR and NOT on binary numbers, and the
-                        most basic gates are thus called AND gate, OR gate and NOT gate.
-                    </p>
-                    <p>
-                        In digital logic design only two voltage levels, or "states", are allowed and these states are generally referred to as Logic "1"
-                        and Logic "0", High and Low, or True and False.
-                        These are the two states represented in Boolean algebra and are in standard truth tables (more on these later) simply denoted by the binary digits of "1" and "0" respectively.
-                        We will tend to use the High/Low state notation throughout this tutorial to avoid confusion, but it is
-                        important to know that any of the other notations may appear in other places while referring to the same concept.
-                        An intuitive example in order to understand these two states is a simple light switch,
-                        as it is either "ON" or "OFF" but can not be both at the same time. The different notations for these states and the relationship between them can be summarized as:
+                    <p class="text-translate" data-translate-key="gates-intro-text">
+                        <!--Digital logic gates are the basic building blocks from which all digital systems are constructed from.-->
+                        <!--They are small electronic circuits, each having one or more than one input and only one output.-->
+                        <!--The relationship between the input and the output is based on a certain logic, called <a href="https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm">Boolean algebra</a>.-->
+                        <!--Logic gates simply performs these Boolean algebraic operations of AND, OR and NOT on binary numbers, and the-->
+                        <!--most basic gates are thus called AND gate, OR gate and NOT gate.-->
+
+                        <!--In digital logic design only two voltage levels, or "states", are allowed and these states are generally referred to as Logic "1"-->
+                        <!--and Logic "0", High and Low, or True and False.-->
+                        <!--These are the two states represented in Boolean algebra and are in standard truth tables (more on these later) simply denoted by the binary digits of "1" and "0" respectively.-->
+                        <!--We will tend to use the High/Low state notation throughout this tutorial to avoid confusion, but it is-->
+                        <!--important to know that any of the other notations may appear in other places while referring to the same concept.-->
+                        <!--An intuitive example in order to understand these two states is a simple light switch,-->
+                        <!--as it is either "ON" or "OFF" but can not be both at the same time. The different notations for these states and the relationship between them can be summarized as:-->
                     </p>
                 </div>
             </div>
@@ -103,23 +101,41 @@
                     <table cellspacing='0' class="table-center"> <!-- cellspacing='0' is important, must stay -->
                         <thead>
                         <tr>
-                            <th>Boolean Algebra</th>
-                            <th>Logic State</th>
-                            <th>Voltage State</th>
+                            <th class="text-translate" data-translate-key="bool-algebra">
+                                <!--Boolean Algebra-->
+                            </th>
+                            <th class="text-translate" data-translate-key="logic-state">
+                                <!--Logic State-->
+                            </th>
+                            <th class="text-translate" data-translate-key="voltage-state">
+                                <!--Voltage State-->
+                            </th>
                         </tr>
                         </thead>
                         <!-- Table Header -->
                         <!-- Table Body -->
                         <tbody>
                         <tr>
-                            <td>Logic "1"</td>
-                            <td>True</td>
-                            <td>High</td>
+                            <td class="text-translate" data-translate-key="logic-1">
+                                <!--Logic "1"-->
+                            </td>
+                            <td class="text-translate" data-translate-key="true">
+                                <!--True-->
+                            </td>
+                            <td class="text-translate" data-translate-key="high">
+                                <!--High-->
+                            </td>
                         </tr><!-- Table Row -->
                         <tr>
-                            <td>Logic "0"</td>
-                            <td>False</td>
-                            <td>Low</td>
+                            <td class="text-translate" data-translate-key="logic-0">
+                                <!--Logic "0"-->
+                            </td>
+                            <td class="text-translate" data-translate-key="false">
+                                <!--False-->
+                            </td>
+                            <td class="text-translate" data-translate-key="low">
+                                <!--Low-->
+                            </td>
                         </tr><!-- Table Row -->
                         </tbody>
                         <!-- Table Body -->
@@ -129,9 +145,9 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <p>
-                        Most digital logic gates and digital logic systems use “Positive logic”, in which a logic level “0” or Low is represented by a
-                        zero voltage in electrical circuits and a logic level “1” or High is represented by a higher voltage such as +5 volts.
+                    <p class="text-translate" data-translate-key="gates-intro-text2">
+                        <!--Most digital logic gates and digital logic systems use “Positive logic”, in which a logic level “0” or Low is represented by a-->
+                        <!--zero voltage in electrical circuits and a logic level “1” or High is represented by a higher voltage such as +5 volts.-->
                     </p>
                 </div>
             </div>
