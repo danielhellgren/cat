@@ -25,6 +25,16 @@
     }
 }
 
+/*-------------------------------
+            LANGUAGE SWAP
+---------------------------------- */
+
+.language-swap{
+    font-size: 11px;
+    float: left;
+    position: absolute;
+}
+
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
     #content-cover {

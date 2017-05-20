@@ -8,24 +8,24 @@
     <script src="./javascript/translator.js"></script>
 
     <title>Curious About IT</title>
+    <script src="javascript/translator.js"></script>
 </head>
 <body id="index">
 
 <main>
     <nav>
         <script>
-            //            var ref = "index.html";
             document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
             document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
             document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
             document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
         </script>
-        <!--<a href="index.html" class="active">Index</a>-->
-        <!--<a href="logic_circuit.html">Logisim</a>-->
-        <!--<a href="binary.html">Binary numbers</a>-->
-        <!--<a href="python.html">Python</a>-->
+
     </nav>
     <header>
+        <script>
+            document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
+        </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
        <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
         <h1>Curious About IT</h1>
     </header>
