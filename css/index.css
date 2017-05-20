@@ -1,10 +1,221 @@
 /* RESET STYLES */
 
 @import url("reset.css");
+
+/*-------------------------------
+          LANGUAGE SWAP
+---------------------------------- */
+
+.language-swap{
+    font-size: 11px;
+    float: left;
+    position: absolute;
+}
+
+/*-------------------------------
+          MEDIA QUERIES
+---------------------------------- */
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    #content-cover-home {
+        display: none;
+    }
+    .mobile-menu-wrapper{
+        display: none !important;
+    }
+    .col-md-2{
+        height: 100%;
+    }
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .table-center {
+        float: none;
+        margin: 3% auto;
+        width: 60%;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #content-cover-home {
+        display: none;
+    }
+    .mobile-menu-wrapper{
+        display: none !important;
+    }
+    .col-md-2{
+        height: 100%;
+    }
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 60%
+    }
+    .table-center {
+        float: none;
+        margin: 3% auto;
+        width: 60%;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    nav {
+        display: none !important;
+    }
+    header {
+        width: 100% !important;
+        margin: 0 !important;
+        height: 15% !important;
+    }
+    header > #header-text > img {
+        display: none !important;
+    }
+    header > #header-text > h1 {
+        font-size: 8vw;
+    }
+    nav a {
+        padding: 0;
+    }
+    #header-text{
+        height: 100%;
+        width: 80%;
+        float: right;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .content {
+        margin-left: 0 !important;
+        height: 85% !important;
+    }
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .table-center {
+        float: none;
+        margin: 3% auto;
+        width: 60%;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    nav {
+        display: none !important;
+    }
+    header {
+        width: 100% !important;
+        margin: 0 !important;
+        height: 20% !important;
+    }
+    header > #header-text > img {
+        display: none !important;
+    }
+    header > #header-text > h1 {
+        font-size: 8vw;
+    }
+    nav a {
+        padding: 0;
+    }
+    #header-text{
+        height: 100%;
+        width: 80%;
+        float: right;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .content {
+        margin-left: 0 !important;
+        height: 80% !important;
+    }
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .table-center {
+        float: none;
+        margin: 3% auto;
+        width: 60%;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    nav{
+        display: none !important;
+    }
+    header {
+        width: 100% !important;
+        margin: 0 !important;
+        height: 15% !important;
+    }
+    header > #header-text > img {
+        display: none !important;
+    }
+    header > #header-text > h1 {
+        font-size: 8vw;
+    }
+    #header-text{
+        height: 100%;
+        width: 80%;
+        float: right;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .content {
+        margin-left: 0 !important;
+        height: 85% !important;
+    }
+    .col-md-2{
+        height: 50%;
+    }
+    #accordion {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .table-center {
+        float: none;
+        margin: 3% auto;
+        width: 60%;
+    }
+}
+
 /*------------------------------
                GENERAL
 --------------------------------*/
-html{height: 100%}
+html{
+    height: 100%;
+    overflow: hidden;
+}
 body{
     font-family: Century Gothic, sans-serif;
     height: 100%;
@@ -13,8 +224,6 @@ body{
 }
 
 main {
-    overflow: scroll;
-    overflow-x: hidden;
     height: 100%;
 }
 
@@ -28,8 +237,10 @@ header {
     width: 85%;
     margin-left: 15%;
     position: fixed;
+    top: 0 !important;
+    height: 15%;
+    text-align: center;
 }
-
 
 Header img{
     height:70px;
@@ -37,6 +248,7 @@ Header img{
     margin:10px;
     float: left;
 }
+
 
 Header h1{
     font-size: 250%;
@@ -47,9 +259,107 @@ Header h1{
     float: left;
     padding-bottom: 30px;
     padding-top: 30px;
-
 }
 
+/*-------------------------------
+           MOBILE MENU
+---------------------------------- */
+
+.mobile-menu-wrapper {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    float: left;
+    position: relative;
+}
+
+#mobile-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:35px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #CEBEBE;
+    width: 70vw;
+    height: 75vh;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 500 !important;
+    border-bottom-right-radius: 6px;
+}
+
+.dropdowncontent ul {
+    height: 100%
+}
+
+.dropdowncontent ul li {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid grey;
+}
+
+.dropdowncontent ul li:last-child {
+    border:none;
+}
+
+.dropdowncontent a {
+    color: black;
+    font-size: 7vh;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 401 !important;
+}
+
+#dropdownhome li:hover {background-color: gray}
+
+.animateMenu{
+    position:relative;
+    animation:animatetop 0.4s
+}
+
+@keyframes animatetop{
+    0%{top:0;opacity:0}
+    100%{top:0;opacity:1}
+}
+
+.show {
+    display:block;
+}
 
 /*---------------------------------
             NAVIGATION
@@ -63,7 +373,7 @@ nav {
     background-color: #CEBEBE;
     position: fixed;
     padding-top: 60px;
-
+    top: 0 !important;
 }
 
 Nav a {
@@ -83,19 +393,25 @@ Nav .active {
     color: #f1f1f1;
 }
 
-/*-------------------------------
-            LANGUAGE SWAP
----------------------------------- */
-
-.language-swap{
-    font-size: 11px;
-    float: left;
-    position: absolute;
-}
-
 /*------------------------------------
             CONTENT
  -------------------------------------*/
+
+.content {
+    bottom: 0 !important;
+    height: 85%;
+    position: fixed;
+}
+
+#content-cover-home{
+    text-align: center !important;
+    bottom: 0 !important;
+    height: 85%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    display: none;
+}
 
 main .content {
     overflow: scroll;
@@ -126,9 +442,9 @@ main .content img {
 
 }
 
-/*
+/*--------------------------
             -TEXT1-
-*/
+----------------------------*/
 
 main .content .text1 {
     display: inline-block;
@@ -136,9 +452,9 @@ main .content .text1 {
     width: 50%;
 }
 
-/*
+/*---------------------------
             -TEXT2-
-*/
+-----------------------------*/
 
 main .content .text2 {
     display: inline-block;

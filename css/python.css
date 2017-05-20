@@ -147,10 +147,6 @@ form input {
     font-size: medium;
     border-width: 3px;
     padding: 2.5%;
-
-
-
-
 }
 
 form input:focus {outline:0;}

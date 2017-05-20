@@ -2,6 +2,20 @@
 
 @import url("reset.css");
 
+/*-------------------------------
+          LANGUAGE SWAP
+---------------------------------- */
+
+.language-swap{
+    font-size: 11px;
+    float: left;
+    position: absolute;
+}
+
+/*-------------------------------
+          MEDIA QUERIES
+---------------------------------- */
+
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
     #content-cover {
@@ -23,16 +37,6 @@
         margin: 3% auto;
         width: 60%;
     }
-}
-
-/*-------------------------------
-            LANGUAGE SWAP
----------------------------------- */
-
-.language-swap{
-    font-size: 11px;
-    float: left;
-    position: absolute;
 }
 
 /* Landscape tablets and medium desktops */
@@ -249,6 +253,22 @@ Header img{
     float: left;
 }
 
+
+Header h1{
+    font-size: 250%;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px ;
+    color: white;
+    padding-left: 20px;
+    float: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+/*-------------------------------
+           MOBILE MENU
+---------------------------------- */
+
 .mobile-menu-wrapper {
     display: inline-block;
     height: 100%;
@@ -345,17 +365,6 @@ Header img{
     display:block;
 }
 
-Header h1{
-    font-size: 250%;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px ;
-    color: white;
-    padding-left: 20px;
-    float: left;
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-
 /*---------------------------------
             NAVIGATION
  -----------------------------------*/
@@ -435,6 +444,10 @@ main .content img {
     padding-top: 2%;
 
 }
+
+/*------------------------------------
+            LOGIC DIAGRAMS
+ -------------------------------------*/
 
 #logicDiagram {
     background-color: #CEBEBE;
@@ -553,6 +566,10 @@ main .content img {
     font-weight: bold;
     font-size: 11px;
 }
+
+/*------------------------------------
+            TRUTH TABLES
+ -------------------------------------*/
 
 table {
     font-family:Arial, Helvetica, sans-serif;
