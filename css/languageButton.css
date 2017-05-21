@@ -1,0 +1,22 @@
+/*-------------------------------
+            LANGUAGE SWAP
+---------------------------------- */
+
+.language-swap{
+
+    /*background: url("../resources/en-flag.png") no-repeat;*/
+    color: white;
+    padding: 2%;
+    float: right;
+    text-decoration: none;
+
+}
+
+.language-swap:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navig {
+    color: black;
+}

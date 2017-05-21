@@ -36,6 +36,8 @@ $(document).ready(function() {
         translateText();
         // setLangButtonImage();
     });
+
+
 });
 
 /*
@@ -83,6 +85,7 @@ function langRef(reqLang){
 function langSwap(){
     if(lang != "se"){
         return "se";
+
     }
     return "en";
 }
