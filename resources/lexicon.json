@@ -231,6 +231,10 @@
   "en":"Here is an animation illustrating the binary system into a decimal number",
   "se":"Här är en animation som visar hur binäratal konverteras till decimaltal"
 },
+  "index":{
+    "en":"Home",
+    "se":"Hem"
+  },
   "":{
     "en":"",
     "se":""

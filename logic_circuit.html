@@ -18,6 +18,7 @@
     <script src="javascript/logic_circuit.js"></script>
     <script src="javascript/circuit_tutorial.js"></script>
     <link href="css/logic_circuit.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/languageButton.css"/>
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
     <script src="javascript/translator.js"></script>
 
@@ -41,7 +42,8 @@
             <div id="dropdown" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
-                        document.write("<li><a href=" + "index.html" + langRef() + ">Index</a></li>");
+                        //            var ref = "index.html";
+                        document.write("<a href=" + "index.html" + langRef() + " class='text-translate' data-translate-key='index'></a>");
                         document.write("<li><a href=" + "logic_circuit.html" + langRef() + ">Logisim</a></li>");
                         document.write("<li><a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a></li>");
                         document.write("<li><a href=" + "python.html" + langRef() + ">Python</a></li>");
@@ -61,7 +63,8 @@
 
     <nav>
         <script>
-            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            //            var ref = "index.html";
+            document.write("<a href=" + "index.html" + langRef() + " class='text-translate' data-translate-key='index'></a>");
             document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
             document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
             document.write("<a href=" + "python.html" + langRef() + ">Python</a>");

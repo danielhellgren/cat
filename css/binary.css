@@ -3,14 +3,6 @@
 @import url("reset.css");
 
 
-/*
----------------GENERAL--------------------
- */
-
-.content {
-
-}
-
 .text{
 
 }
@@ -19,11 +11,11 @@
           LANGUAGE SWAP
 ---------------------------------- */
 
-.language-swap{
-    font-size: 11px;
-    float: left;
-    position: absolute;
-}
+/*.language-swap{*/
+    /*font-size: 11px;*/
+    /*float: left;*/
+    /*position: absolute;*/
+/*}*/
 
 /*-------------------------------
           MEDIA QUERIES

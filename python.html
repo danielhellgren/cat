@@ -7,6 +7,7 @@
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="css/outline.css"/>
+    <link type="text/css" rel="stylesheet" href="css/languageButton.css"/>
     <link type="text/css" rel="stylesheet" href="css/python.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="javascript/python.js"></script>
@@ -22,10 +23,10 @@
     <nav>
         <script>
             //            var ref = "index.html";
-            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            document.write("<a href=" + "index.html" + langRef() + " class='text-translate navig' data-translate-key='index'></a>");
             document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
-            document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
-            document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
+            document.write("<a href=" + "binary.html" + langRef() + " class='text-translate navig' data-translate-key='binary'></a>");
+            document.write("<a  href=" + "python.html" + langRef() + ">Python</a>");
         </script>
     </nav>
     <header>
@@ -52,6 +53,8 @@
         <script>
             document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
         </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
+
+
         <div id="header-text">
             <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
             <h1>Curious About IT</h1>

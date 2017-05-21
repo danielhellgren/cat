@@ -6,6 +6,7 @@
     <script src="javascript/jquery-1.11.0.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/languageButton.css"/>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/binary.css"/>
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
@@ -20,7 +21,7 @@
     <!--NAVIGATION BAR-->
     <nav>
         <script>
-            document.write("<a href=" + "index.html" + langRef() + ">Index</a>");
+            document.write("<a href=" + "index.html" + langRef() + " class='text-translate' data-translate-key='index'></a>");
             document.write("<a href=" + "logic_circuit.html" + langRef() + ">Logisim</a>");
             document.write("<a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a>");
             document.write("<a href=" + "python.html" + langRef() + ">Python</a>");
@@ -67,7 +68,6 @@
             <h1 class="text-translate" data-translate-key="binary-title"></h1>
                 <p class="text-translate" data-translate-key="binary-text"></p>
             <div class="binary-animation-div">
-                <h1 class="text-translate" data-translate-key="animation-title"></h1>
                 <p class="text-translate" data-translate-key="animation-text"></p>
                 <div id="binary-animation">
                     <div class="binary-animation-number-slot" id="binary-animation-header"></div>
