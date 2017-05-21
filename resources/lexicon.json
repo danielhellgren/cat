@@ -59,12 +59,60 @@
     "en":"Svenska",
     "se":"English"
   },
+  "gates-intro-title":{
+    "en":"Logic Gates - An Introduction",
+    "se":"Logiska Grindar - En Introduktion"
+  },
+  "gates-intro-text":{
+    "en":"Digital logic gates are the basic building blocks from which all digital systems are constructed from. They are small electronic circuits, each having one or more than one input and only one output. The relationship between the input and the output is based on a certain logic, called <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>Boolean algebra</a>. Logic gates simply performs these Boolean algebraic operations of AND, OR and NOT on binary numbers, and the most basic gates are thus called AND gate, OR gate and NOT gate.<br><br>In digital logic design only two voltage levels, or \"states\", are allowed and these states are generally referred to as Logic \"1\" and Logic \"0\", High and Low, or True and False. These are the two states represented in Boolean algebra and are in standard truth tables (more on these later) simply denoted by the binary digits of \"1\" and \"0\" respectively. We will tend to use the High/Low state notation throughout this tutorial to avoid confusion, but it is important to know that any of the other notations may appear in other places while referring to the same concept. An intuitive example in order to understand these two states is a simple light switch,  as it is either \"ON\" or \"OFF\" but can not be both at the same time. The different notations for these states and the relationship between them can be summarized as:",
+    "se":"Digitala logiska grindar är de grundläggande byggstenarna från vilket alla digitala system är uppbyggda. De är små elektroniska kretsar som var och en har en eller flera insignaler samt endast en utsignal. Sambandet mellan dessa in- och utsignaler baseras på en särskild logik, kallad <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>boolesk algebra</a>. Logiska grindar utför helt enkelt dessa booleska operationer i form av AND, OR och NOT på binära tal, vilket också har gett namnen till de mest grundläggande logiska grindarna: AND-grinden, OR-grinden och NOT-grinden. <br><br>Inom digitala kretsar används enbart två spänningsnivåer, eller “tillstånd”, och de brukar generellt kallas för logisk Etta och logisk Nolla, Hög och Låg eller Sant och Falskt. Dessa är de två tillstånd som används inom den booleska algebran och är i vanliga sanningstabeller (“truth tables” på engelska, mer om dessa lite senare) representerade av de binära talen “1” samt “0”. Vi kommer i denna genomgång försöka hålla oss till beteckningen Hög/Låg för att referera till de olika tillstånden, främst för att undvika förvirring, men det är viktigt att ha koll på att någon av de andra beteckningarna kan förekomma i andra texter men syftar till exakt samma koncept. Ett intuitivt exempel för att få grepp om dessa tillstånd är en vanlig strömbrytare till en lampa, då den antingen kan stå på läget “Av” eller läget \"På\" men inte båda samtidigt. De olika beteckningarna för tillstånden och sambandet mellan dem kan summeras på följande vis:"
+  },
+  "gates-intro-text2":{
+    "en":"Most digital logic gates and digital logic systems use “Positive logic”, in which a logic level “0” or Low is represented by a zero voltage in electrical circuits and a logic level “1” or High is represented by a higher voltage such as +5 volts.",
+    "se":"De flesta digitala logiska grindar samt logiska system i allmänhet använder något som kallas för “positiv logik”, vilket innebär att ett Lågt tillstånd representeras av en elektrisk ström på 0 volt i elektriska kretsar samtidigt som ett Högt tillstånd representeras av en högre elektrisk strömstyrka, oftast runt +5 volt."
+  },
+  "bool-algebra":{
+    "en":"Boolean Algebra",
+    "se":"Booelsk Algebra"
+  },
+  "logic-state":{
+    "en":"Logic State",
+    "se":"Logiskt Tillstånd"
+  },
+  "voltage-state":{
+    "en":"Voltage State",
+    "se":"Spänningstillstånd"
+  },
+  "true":{
+    "en":"True",
+    "se":"Sann"
+  },
+  "false":{
+    "en":"False",
+    "se":"Falsk"
+  },
+  "high":{
+    "en":"High",
+    "se":"Högt"
+  },
+  "low":{
+    "en":"Low",
+    "se":"Lågt"
+  },
+  "logic-0":{
+    "en":"Logic \"0\"",
+    "se":"Logisk \"0\""
+  },
+  "logic-1":{
+    "en":"Logic \"1\"",
+    "se":"Logisk \"1\""
+  },
   "index":{
     "en":"Home",
     "se":"Hem"
   },
   "":{
     "en":"",
-    "se":""
+    "se ":""
   }
 }

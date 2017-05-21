@@ -2,6 +2,20 @@
 
 @import url("reset.css");
 
+/*-------------------------------
+          LANGUAGE SWAP
+---------------------------------- */
+
+.language-swap{
+    font-size: 11px;
+    float: left;
+    position: absolute;
+}
+
+/*-------------------------------
+          MEDIA QUERIES
+---------------------------------- */
+
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
     #content-cover {
@@ -23,16 +37,6 @@
         margin: 3% auto;
         width: 60%;
     }
-}
-
-/*-------------------------------
-            LANGUAGE SWAP
----------------------------------- */
-
-.language-swap{
-    font-size: 11px;
-    float: left;
-    position: absolute;
 }
 
 /* Landscape tablets and medium desktops */
@@ -239,7 +243,6 @@ header {
     position: fixed;
     top: 0 !important;
     height: 15%;
-    text-align: center;
 }
 
 Header img{
@@ -248,6 +251,22 @@ Header img{
     margin:10px;
     float: left;
 }
+
+
+Header h1{
+    font-size: 250%;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px ;
+    color: white;
+    padding-left: 20px;
+    float: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+/*-------------------------------
+           MOBILE MENU
+---------------------------------- */
 
 .mobile-menu-wrapper {
     display: inline-block;
@@ -269,6 +288,10 @@ Header img{
     position: relative;
 }
 
+#cont{
+    display: inline-block;
+}
+
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
@@ -276,6 +299,8 @@ Header img{
     border-radius: 2px;
     margin: 6px 0;
     transition: 0.4s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .change .bar1 {
@@ -345,17 +370,6 @@ Header img{
     display:block;
 }
 
-Header h1{
-    font-size: 250%;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px ;
-    color: white;
-    padding-left: 20px;
-    float: left;
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-
 /*---------------------------------
             NAVIGATION
  -----------------------------------*/
@@ -395,6 +409,12 @@ Nav .active {
 .content {
     bottom: 0 !important;
     height: 85%;
+    position: fixed;
+}
+
+.container-fluid{
+    height: 100%;
+    width: 100%;
 }
 
 #content-cover{
@@ -436,6 +456,10 @@ main .content img {
 
 }
 
+/*------------------------------------
+            LOGIC DIAGRAMS
+ -------------------------------------*/
+
 #logicDiagram {
     background-color: #CEBEBE;
     border: solid 1px black;
@@ -470,6 +494,10 @@ main .content img {
 #accordion .ui-accordion-header {
     max-height: 15%;
     text-align: center;
+}
+
+.ui-accordion-header.ui-state-active {
+    background-color: #7D1128;
 }
 
 #accordion{
@@ -553,6 +581,10 @@ main .content img {
     font-weight: bold;
     font-size: 11px;
 }
+
+/*------------------------------------
+            TRUTH TABLES
+ -------------------------------------*/
 
 table {
     font-family:Arial, Helvetica, sans-serif;

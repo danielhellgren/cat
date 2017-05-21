@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="javascript/jquery-1.11.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <script src="javascript/index.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -22,15 +26,39 @@
         </script>
 
     </nav>
+
     <header>
+        <div class="mobile-menu-wrapper">
+            <div id="mobile-menu">
+                <div id="cont">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div id="dropdownhome" class="dropdowncontent animateMenu">
+                <ul>
+                    <script>
+                        //            var ref = "index.html";
+                        document.write("<li><a href=" + "index.html" + langRef() + ">Index</a></li>");
+                        document.write("<li><a href=" + "logic_circuit.html" + langRef() + ">Logisim</a></li>");
+                        document.write("<li><a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a></li>");
+                        document.write("<li><a href=" + "python.html" + langRef() + ">Python</a></li>");
+                    </script>
+
+                </ul>
+            </div>
+        </div>
         <script>
             document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
         </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
-       <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
-        <h1>Curious About IT</h1>
+        <div id="header-text">
+            <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
+            <h1>Curious About IT</h1>
+        </div>
     </header>
 
-    <div class="content">
+    <div class="content" style="position: fixed">
         <div class="text1">
             <p class="text-translate" data-translate-key="intro-text">
                 <!--IT is a part of people's work and leisure.-->
@@ -80,7 +108,7 @@
             <img alt="pic-IT houses" src="resources/skola.jpg"/>
         </div> <!-- CLOSE PIC DIV -->
     </div> <!-- CLOSE CONTENT DIV -->
-
+    <div id="content-cover-home" style="position: fixed"></div>
 </main>
 
 
