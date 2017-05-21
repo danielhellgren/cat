@@ -40,7 +40,6 @@
             <div id="dropdownpython" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
-                        //            var ref = "index.html";
                         document.write("<li><a href=" + "index.html" + langRef() + ">Index</a></li>");
                         document.write("<li><a href=" + "logic_circuit.html" + langRef() + ">Logisim</a></li>");
                         document.write("<li><a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a></li>");
@@ -63,55 +62,61 @@
         <h1>
             Python
         </h1>
-        <p>
-            Python is a widely used high-level programming language for general-purpose programming. This is why
-            it is a good language to start with when you are going to study Information Technology at Uppsala University.
-            Below is an interactive tutorial in order for you to get a basic understanding of python.
+        <p class="text-translate" data-translate-key="python-intro">
+            <!--Python is a widely used high-level programming language for general-purpose programming. This is why-->
+            <!--it is a good language to start with when you are going to study Information Technology at Uppsala University.-->
+            <!--Below is an interactive tutorial in order for you to get a basic understanding of python.-->
         </p>
 
         <h1>
             Hello World!
         </h1>
-        <p>
-            When learning to program in a new language a good start is how to learn how to get the program to write
-             "Hello World!"
+        <p class="text-translate" data-translate-key="hello-world">
+            <!--When learning to program in a new language a good start is how to learn how to get the program to write-->
+             <!--"Hello World!"-->
         </p>
-        <p>
-            To tell the program what to print you simply use the word "print", and then in parentheses next to "print" tell the
-             program what you want to be printed. Press the code example below and you will se what the program would
-            produce.
+        <p class="text-translate" data-translate-key="hello-world2">
+            <!--To tell the program what to print you simply use the word "print", and then in parentheses next to "print" tell the-->
+             <!--program what you want to be printed. Press the code example below and you will se what the program would-->
+            <!--produce.-->
         </p>
 
         <div  class="code1">
             print("Hello World!")
         </div>
 
-            <button id="result-btn0"> Run code </button>
+            <button id="result-btn0" class="text-translate" data-translate-key="run-code">
+                <!--Run code-->
+            </button>
 
         <div class="code2" style="display:none;">
             Hello World!
         </div>
 
 
-        <p> Now you try! Write a python code so that when it executes it says "Good bye!" </p>
+        <p class="text-translate" data-translate-key="try-it-yourself">
+            <!--Now you try! Write a python code so that when it executes it says "Good bye!"-->
+        </p>
 
         <form autocomplete="off">
             Write your code below: <br>
             <input  type="text" name="writtenCode">
         </form>
 
-        <button  id="result-btn1"> Run code </button>
+        <button  id="result-btn1" class="text-translate" data-translate-key="run-code">
+            <!--Run code-->
+        </button>
 
-        <div class="code3" style="display:none;">
+        <div class="code3" style="display:none;" >
             Good bye!
         </div>
 
-        <div class="code4" style="display:none;">
-            Error! You must have written the code wrong, try again
+        <div class="code4 text-translate" style="display:none;" data-translate-key="error-msg">
+            <!--Error! You must have written the code wrong, try again-->
         </div>
 
-        <h1>
-            Text editor
+        <h1 class="text-translate" data-translate-key="text-editor">
+            <!--Text editor-->
         </h1>
 
         <canvas id="canvas" width="450" height="450"></canvas>

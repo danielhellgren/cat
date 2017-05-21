@@ -107,8 +107,124 @@
     "en":"Logic \"1\"",
     "se":"Logisk \"1\""
   },
+  "and-gate-title":{
+    "en":"AND Gate",
+    "se":"AND Grind"
+  },
+  "and-gate-text":{
+    "en":"Just as the name applies, the AND gate performs an AND operation (again, read more about Boolean algebra <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>here</a>). It has one output and can in theory have any number of inputs, although two inputs is the \"standard\" gate setup and is what we will use here. The output state is normally set to Low and only goes to High when ALL of its inputs are also set to High. These characteristics can be expressed in what is called a <a href='https://en.wikipedia.org/wiki/Truth_table'>truth table</a>, showing what the output state will be given the input combination. The truth table for the AND gate is given as:",
+    "se":"Precis som namnet antyder så utför AND-grinden en boolesk operation av typen AND (som tidigare nämnts kan du läsa på mer om boolesk algebra <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>här</a>). Den har en utsignal och kan teoretiskt sett ha vilket antal av insignaler som helst, men två insignaler är “standarduppsättningen” och är det som vi kommer att använda här. Tillståndet på utsignalen är normalt satt till Låg och går endast till Hög när ALLA av grindens insignaler också är satta till Hög. Dessa egenskaper kan uttryckas i vad som brukar kallas för en <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>sanningstabell</a> som visar vad tillståndet på utsignalen kommer att vara givet en viss insignalskombination. Sanningstabellen för AND-grinden ser ut som följande: "
+  },
+  "and-gate-text2":{
+    "en":"The logic or Boolean expression given for a digital logic AND gate is that for Logical Multiplication which is denoted by a single dot or full stop symbol, ( . ) giving us the Boolean expression of:  A.B = Q. Then we can define the operation of a 2-input logic AND gate as being: “If both A and B are true, then Q is true”.",
+    "se":"Logiken (det booleska uttrycket) given till en logisk AND-grind är en konjunktion, som betecknas av en punkt (.), vilket ger det booleska uttrycket: INPUT1.INPUT2 = OUTPUT. Vi kan då definiera operationen av en AND-grind med två insignaler enligt: “Om både INPUT1 och INPUT2 är sanna, så är OUTPUT också sann”."
+  },
+  "and-gate-text3":{
+    "en":"The symbols used to represent logic gates can actually vary depending on region, but we are here using the American standard which is the most common when drawing schematics for electrical circuits. In the simple circuit below we have added a 2-input logic AND gate that is connected to two inputs, represented by squares containing a green circle, and one output, represented by a circle containing another green circle (if you are on a computer, you can hover the mouse over any of the logic components to see what they are if needed). These green circles will tell you which state each input and output is currently in, High or Low. A darker green tone represents a Low state while a more neon green tone represents a High state. You can toggle the inputs between High and Low yourself in the circuit simply by double clicking them. Try each combination of inputs given in the AND gate's truth table above, and see how the output changes!",
+    "se":"Symbolerna som används för de logiska grindarna kan faktiskt bero på region, men här använder vi den amerikanska standarden vilket är mest vanlig när man ritar krestscheman. I den simpla kretsen nedan har vi lagt till en 2-input AND grind kopplad till två input, representerade som kvadrater kopplade till en grön cirkel, och en output, representerad av en cirkel som innehåller en cirkel (om du befinner tdig på en dator, kan du hålla muspekaren över valfri komponent för att se om dom behövs). Dessa gröna cirklar kommer visa vilket läge varje input och output befinner sig i, Högt eller Lågt. Mörkare grön representerar ett Lågt läge medan en mera neon grön representerar Högt. Du kan växla lägen på varje input mellan Högt och Lågt genom att dubbelklicka dem. Testa varje kombinationav input givet i AND grindens tabell och se hur output ändras!"
+  },
+  "or-gate-title":{
+    "en":"OR Gate",
+    "se":"OR Grind"
+  },
+  "or-gate-text":{
+    "en":"Again, as the name applies, the OR gate performs an Boolean OR operation. It has one output and can in theory have any number of inputs, although two inputs is the \"standard\" gate setup, similarly to the AND gate, and is what we will use here. The output state is normally set to Low and only goes to High when one or more of its inputs are also set to High. These characteristics can be expressed in the following truth table:",
+    "se":"Återigen, som namnet antyder så är OR grinden en Booelsk OR(Eller) operator. Den har en output och kan i teorin ha odefinerat många inputs, dock är två input \"standarduppsättningen\", likt AND grinden, och detta kommer vi använda här. Output läget är vanligtvis Lågt och går enbart till Högt när en eller fler av alla input är satta till Högt. Dessa egenskaper kan uttryckas i följande tabell:"
+  },
+  "or-gate-text2":{
+    "en":"The logic or Boolean expression given for a digital logic OR gate is that for Logical Addition which is denoted by a plus sign, ( + ) giving us the Boolean expression of:  A+B = Q. Then we can define the operation of a 2-input logic OR gate as being “If either A or B is true, then Q is true”.",
+    "se":""
+  },
+  "or-gate-text3":{
+    "en":"In the simple circuit below we have added a 2-input logic OR gate that is connected to two inputs, similarly to the circuit example of the AND gate. Try each combination of inputs given in the OR gate's truth table above, and see how the output changes!",
+    "se":""
+  },
+  "not-gate-title":{
+    "en":"NOT Gate",
+    "se":"NOT Grind"
+  },
+  "not-gate-text":{
+    "en":"The last of the logic gates that we will cover in this tutorial is the NOT gate, which as you probably have figured out by now performs an Boolean NOT operation. The NOT gate is the most basic of all the logical gates, with only one input and one output. The output level is normally at High and goes to Low when its single input is at High, in other words it \"inverts\" its input signal. This logic gate is therefore sometimes refered to as an Inverter. These characteristics can be expressed in the following truth table:",
+    "se":""
+  },
+  "not-gate-text2":{
+    "en":"The output from a NOT gate only returns High again when its input is at Low, giving us the Boolean expression of: !A = Q. Then we can define the operation of a single input digital logic NOT gate as being: “If A is NOT true, then Q is true”.",
+    "se":""
+  },
+  "not-gate-text3":{
+    "en":" In the simple circuit below we have added a logic NOT gate that is connected to an input and an output. Try each combination of inputs given in the NOT gate's truth table above, and see how the output changes!",
+    "se":""
+  },
+  "logic-sim-title":{
+    "en":"Logic Circuit Simulator",
+    "se":"Logisk Krets Simulator"
+  },
+  "logic-sim-text":{
+    "en":"Now that you have some basic knowledge about some of the most common logical gates you can practice your skills in this circuit simulator below. It works similarly to the simple circuit examples you have encountered earlier, but instead of just having the freedom of toggling the inputs from Low to High, you can now create complete circuits on your own! In the menus you can choose the components you want,  and then add them to the \"circuit board\" by selecting and dragging them. Once on the board, inputs can be connected to outputs by clicking and dragging from one of the component's inputs/output to another one. Right clicking on the board will give you a context menu providing undo/redo actions as well as delete, copy and paste. Have fun!",
+    "se":""
+  },
+  "logic-gates":{
+    "en":"Logic Gates",
+    "se":"Logiska Grindar"
+  },
+  "undo":{
+    "en":"Undo (Ctrl + Z)",
+    "se":"Ångra (Ctrl + Z)"
+  },
+  "redo":{
+    "en":"Redo (Ctrl + Y)",
+    "se":"Gör om (Ctrl + Y)"
+  },
+  "copy":{
+    "en":"Copy (Ctrl + C)",
+    "se":"Kopiera (Ctrl + C)"
+  },
+  "cut":{
+    "en":"Cut (Ctrl + X)",
+    "se":"Klipp (Ctrl + X)"
+  },
+  "paste":{
+    "en":"Paste (Ctrl + V)",
+    "se":"Klistra (Ctrl + V)"
+  },
+  "delete":{
+    "en":"Delete (Backspace)",
+    "se":"Radera (Bakåtslag)"
+  },
+  "python-intro":{
+    "en":"Python is a widely used high-level programming language for general-purpose programming. This is why it is a good language to start with when you are going to study Information Technology at Uppsala University. Below is an interactive tutorial in order for you to get a basic understanding of python.",
+    "se":"Python är ett brett användt hög-nivå språk för generellt programmeringsändamål. Detta är varför det är bra intro-språk för studier inom Informationsteknologi på Uppsala Universitet. Nedan finns en interaktiv genomgång av det mest grundläggande inom python."
+  },
+  "hello-world":{
+    "en":"When learning to program in a new language a good start is how to learn how to get the program to write \"Hello World!\"",
+    "se":"När man lär sig programmera ett nytt språk så är det bra att börja med det mest grundläggande program som finns \"Hello World!\""
+  },
+  "hello-world2":{
+    "en":"To tell the program what to print you simply use the word \"print\", and then in parentheses next to \"print\" tell the program what you want to be printed. Press the code example below and you will se what the program would produce.",
+    "se":"För att säga till programet att skriva så använder man helt enkelt order \"print\", och sedan inom parantes efter \"print\" för att säga vad som ska skrivas. Se kodexemplet nedan för att se vad programmet gör."
+  },
+  "run-code":{
+    "en":"Run code",
+    "se":"Kör kod"
+  },
+  "try-it-yourself":{
+    "en":"Now you try! Write python code so that when it executes it says \"Good bye!\"",
+    "se":"Testa själv! Skriv python kod som när den körs säger \"Good bye!\""
+  },
+  "good-bye":{
+    "en":"Good bye!",
+    "se":"Hej då!"
+  },
+  "error-msg":{
+    "en":"Error! You must have written the code wrong, try again",
+    "se":"Error! Du måste ha skrivit något fel, testa igen"
+  },
+  "text-editor":{
+    "en":"Text editor",
+    "se":"Textredigerare"
+  },
   "":{
     "en":"",
-    "se ":""
+    "se":""
   }
 }
