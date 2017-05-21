@@ -2,6 +2,19 @@
 
 @import url("reset.css");
 
+
+/*
+---------------GENERAL--------------------
+ */
+
+.content {
+
+}
+
+.text{
+
+}
+
 /*-------------------------------
           LANGUAGE SWAP
 ---------------------------------- */
@@ -451,12 +464,16 @@ main .content img {
             ANIMATION
 ---------------------------------- */
 
+.binary-animation-div{
+    align-content: center;
+}
 
 #binary-animation{
     /*background: url(../resources/binary_counter.png);*/
+
     width: 495px;
     height: 130px;
-    border:black 1px solid;
+    /*border:black 1px solid;*/
     margin-left: 3%;
     margin-top: 2%;
 }

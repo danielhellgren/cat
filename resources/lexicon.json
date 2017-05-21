@@ -223,6 +223,14 @@
     "en":"Text editor",
     "se":"Textredigerare"
   },
+  "animation-title":{
+    "en":"Animation",
+    "se":"Animation"
+  },
+  "animation-text":{
+  "en":"Here is an animation illustrating the binary system into a decimal number",
+  "se":"Här är en animation som visar hur binäratal konverteras till decimaltal"
+},
   "":{
     "en":"",
     "se":""
