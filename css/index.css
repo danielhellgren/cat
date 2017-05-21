@@ -460,6 +460,19 @@ main .content .text2 {
     width: 50%;
 }
 
+.video{
+    height: 60%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    float: right;
+}
+
+iframe {
+    margin: 4%;
+    width: 80%;
+}
+
 
 
 

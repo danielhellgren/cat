@@ -109,7 +109,7 @@
   },
   "and-gate-title":{
     "en":"AND Gate",
-    "se":"AND Grind"
+    "se":"AND-Grind"
   },
   "and-gate-text":{
     "en":"Just as the name applies, the AND gate performs an AND operation (again, read more about Boolean algebra <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>here</a>). It has one output and can in theory have any number of inputs, although two inputs is the \"standard\" gate setup and is what we will use here. The output state is normally set to Low and only goes to High when ALL of its inputs are also set to High. These characteristics can be expressed in what is called a <a href='https://en.wikipedia.org/wiki/Truth_table'>truth table</a>, showing what the output state will be given the input combination. The truth table for the AND gate is given as:",
@@ -125,7 +125,7 @@
   },
   "or-gate-title":{
     "en":"OR Gate",
-    "se":"OR Grind"
+    "se":"OR-Grind"
   },
   "or-gate-text":{
     "en":"Again, as the name applies, the OR gate performs an Boolean OR operation. It has one output and can in theory have any number of inputs, although two inputs is the \"standard\" gate setup, similarly to the AND gate, and is what we will use here. The output state is normally set to Low and only goes to High when one or more of its inputs are also set to High. These characteristics can be expressed in the following truth table:",
@@ -141,7 +141,7 @@
   },
   "not-gate-title":{
     "en":"NOT Gate",
-    "se":"NOT Grind"
+    "se":"NOT-Grind"
   },
   "not-gate-text":{
     "en":"The last of the logic gates that we will cover in this tutorial is the NOT gate, which as you probably have figured out by now performs an Boolean NOT operation. The NOT gate is the most basic of all the logical gates, with only one input and one output. The output level is normally at High and goes to Low when its single input is at High, in other words it \"inverts\" its input signal. This logic gate is therefore sometimes refered to as an Inverter. These characteristics can be expressed in the following truth table:",
