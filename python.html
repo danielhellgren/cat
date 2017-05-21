@@ -41,7 +41,7 @@
             <div id="dropdownpython" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
-                        document.write("<li><a href=" + "index.html" + langRef() + ">Index</a></li>");
+                        document.write("<li><a href=" + "index.html" + langRef() + " class='text-translate' data-translate-key='index'></a></li>");
                         document.write("<li><a href=" + "logic_circuit.html" + langRef() + ">Logisim</a></li>");
                         document.write("<li><a href=" + "binary.html" + langRef() + " class='text-translate' data-translate-key='binary'></a></li>");
                         document.write("<li><a href=" + "python.html" + langRef() + ">Python</a></li>");
@@ -50,11 +50,11 @@
                 </ul>
             </div>
         </div>
-        <script>
-            document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
-        </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
-
-
+        <div class="translateButton">
+            <script>
+                document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
+            </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
+        </div>
         <div id="header-text">
             <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
             <h1>Curious About IT</h1>

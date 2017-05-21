@@ -88,8 +88,7 @@
     }
     #header-text{
         height: 100%;
-        width: 80%;
-        float: right;
+        width: 60%;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -138,8 +137,7 @@
     }
     #header-text{
         height: 100%;
-        width: 80%;
-        float: right;
+        width: 60%;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -185,8 +183,7 @@
     }
     #header-text{
         height: 100%;
-        width: 80%;
-        float: right;
+        width: 60%;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -369,6 +366,12 @@ Header h1{
 
 .show {
     display:block;
+}
+
+.translateButton{
+    height: 100%;
+    width: 10%;
+    float: right;
 }
 
 /*---------------------------------
