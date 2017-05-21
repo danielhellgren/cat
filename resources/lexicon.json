@@ -116,12 +116,12 @@
     "se":"Precis som namnet antyder så utför AND-grinden en boolesk operation av typen AND (som tidigare nämnts kan du läsa på mer om boolesk algebra <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>här</a>). Den har en utsignal och kan teoretiskt sett ha vilket antal av insignaler som helst, men två insignaler är “standarduppsättningen” och är det som vi kommer att använda här. Tillståndet på utsignalen är normalt satt till Låg och går endast till Hög när ALLA av grindens insignaler också är satta till Hög. Dessa egenskaper kan uttryckas i vad som brukar kallas för en <a href='https://www.tutorialspoint.com/computer_logical_organization/boolean_algebra.htm'>sanningstabell</a> som visar vad tillståndet på utsignalen kommer att vara givet en viss insignalskombination. Sanningstabellen för AND-grinden ser ut som följande: "
   },
   "and-gate-text2":{
-    "en":"The logic or Boolean expression given for a digital logic AND gate is that for Logical Multiplication which is denoted by a single dot or full stop symbol, ( . ) giving us the Boolean expression of:  A.B = Q. Then we can define the operation of a 2-input logic AND gate as being: “If both A and B are true, then Q is true”.",
-    "se":"Logiken (det booleska uttrycket) given till en logisk AND-grind är en konjunktion, som betecknas av en punkt (.), vilket ger det booleska uttrycket: INPUT1.INPUT2 = OUTPUT. Vi kan då definiera operationen av en AND-grind med två insignaler enligt: “Om både INPUT1 och INPUT2 är sanna, så är OUTPUT också sann”."
+    "en":"The logic or Boolean expression given for a digital logic AND gate is that for Logical Multiplication which is denoted by a single dot or full stop symbol, ( . ) giving us the Boolean expression of:  INPUT1.INPUT2 = OUTPUT. Then we can define the operation of a 2-input logic AND gate as being: “If both INPUT1 and INPUT2 are true, then OUTPUT is true”.",
+    "se":"Logiken, alltså det booleska uttrycket, given till en logisk AND-grind är en konjunktion, som betecknas av en punkt (.), vilket ger det booleska uttrycket: INPUT1.INPUT2 = OUTPUT. Vi kan då definiera operationen av en AND-grind med två insignaler enligt: “Om både INPUT1 och INPUT2 är sanna, så är OUTPUT också sann”."
   },
   "and-gate-text3":{
     "en":"The symbols used to represent logic gates can actually vary depending on region, but we are here using the American standard which is the most common when drawing schematics for electrical circuits. In the simple circuit below we have added a 2-input logic AND gate that is connected to two inputs, represented by squares containing a green circle, and one output, represented by a circle containing another green circle (if you are on a computer, you can hover the mouse over any of the logic components to see what they are if needed). These green circles will tell you which state each input and output is currently in, High or Low. A darker green tone represents a Low state while a more neon green tone represents a High state. You can toggle the inputs between High and Low yourself in the circuit simply by double clicking them. Try each combination of inputs given in the AND gate's truth table above, and see how the output changes!",
-    "se":"Symbolerna som används för de logiska grindarna kan faktiskt bero på region, men här använder vi den amerikanska standarden vilket är mest vanlig när man ritar krestscheman. I den simpla kretsen nedan har vi lagt till en 2-input AND grind kopplad till två input, representerade som kvadrater kopplade till en grön cirkel, och en output, representerad av en cirkel som innehåller en cirkel (om du befinner tdig på en dator, kan du hålla muspekaren över valfri komponent för att se om dom behövs). Dessa gröna cirklar kommer visa vilket läge varje input och output befinner sig i, Högt eller Lågt. Mörkare grön representerar ett Lågt läge medan en mera neon grön representerar Högt. Du kan växla lägen på varje input mellan Högt och Lågt genom att dubbelklicka dem. Testa varje kombinationav input givet i AND grindens tabell och se hur output ändras!"
+    "se":"Symbolerna som används för de logiska grindarna kan faktiskt bero på region, men här använder vi den amerikanska standarden vilket är mest vanlig när man ritar krestscheman. I den simpla kretsen nedan har vi lagt till en AND-grind med två insignaler kopplad till två insignaler, representerade som kvadrater kopplade till en grön cirkel, och en utsignal, representerad av en cirkel som innehåller en cirkel (om du befinner dig på en dator kan du hålla muspekaren över valfri komponent för att få fram lite information). Dessa gröna cirklar kommer visa vilket tillstånd varje insignal och utsignal befinner sig i, Högt eller Lågt. Mörkare grön representerar ett Lågt tillstånd medan en mera neongrön representerar ett Högt tillstånd. Du kan växla tillstånd på varje insignal mellan Högt och Lågt genom att dubbelklicka dem. Testa varje kombination av insignaler givet i AND-grindens sanningstabell och se hur utsignalen ändras!"
   },
   "or-gate-title":{
     "en":"OR Gate",
@@ -129,15 +129,15 @@
   },
   "or-gate-text":{
     "en":"Again, as the name applies, the OR gate performs an Boolean OR operation. It has one output and can in theory have any number of inputs, although two inputs is the \"standard\" gate setup, similarly to the AND gate, and is what we will use here. The output state is normally set to Low and only goes to High when one or more of its inputs are also set to High. These characteristics can be expressed in the following truth table:",
-    "se":"Återigen, som namnet antyder så är OR grinden en Booelsk OR(Eller) operator. Den har en output och kan i teorin ha odefinerat många inputs, dock är två input \"standarduppsättningen\", likt AND grinden, och detta kommer vi använda här. Output läget är vanligtvis Lågt och går enbart till Högt när en eller fler av alla input är satta till Högt. Dessa egenskaper kan uttryckas i följande tabell:"
+    "se":"Återigen, som namnet antyder så utför OR-grinden en booelsk operation av typen OR (Eller). Den har en utsignal och kan i teorin ha odefinerat många insignaler, dock är två insignaler \"standarduppsättningen\", likt AND-grinden, och detta kommer vi använda här. Tillstånded för utsignalen är vanligtvis Lågt och går enbart till Högt när en eller fler av insignalerna är satta till Högt. Dessa egenskaper kan uttryckas i följande tabell:"
   },
   "or-gate-text2":{
     "en":"The logic or Boolean expression given for a digital logic OR gate is that for Logical Addition which is denoted by a plus sign, ( + ) giving us the Boolean expression of:  A+B = Q. Then we can define the operation of a 2-input logic OR gate as being “If either A or B is true, then Q is true”.",
-    "se":""
+    "se":"Logiken, alltså det booleska uttrycket, given till en logisk OR-grind är en disjunktion, som betecknas av ett plustecken (+), vilket ger det booleska uttrucket: INPUT1+INPUT2 = OUTPUT. Vi kan då definiera operationen av en OR-grind med två insignaler enligt: “Om antingen INPUT1 eller INPUT2 är sann, så är OUTPUT också sann”."
   },
   "or-gate-text3":{
     "en":"In the simple circuit below we have added a 2-input logic OR gate that is connected to two inputs, similarly to the circuit example of the AND gate. Try each combination of inputs given in the OR gate's truth table above, and see how the output changes!",
-    "se":""
+    "se":"I den simpla kretsen nedan har vi lagt till en logisk OR-grind med två insignaler, likt kretsexemplet för AND-grinden. Testa varje kompination av insignaler givet i OR-grindens sanningstabell och se hur utsignalen ändras!"
   },
   "not-gate-title":{
     "en":"NOT Gate",
@@ -145,23 +145,23 @@
   },
   "not-gate-text":{
     "en":"The last of the logic gates that we will cover in this tutorial is the NOT gate, which as you probably have figured out by now performs an Boolean NOT operation. The NOT gate is the most basic of all the logical gates, with only one input and one output. The output level is normally at High and goes to Low when its single input is at High, in other words it \"inverts\" its input signal. This logic gate is therefore sometimes refered to as an Inverter. These characteristics can be expressed in the following truth table:",
-    "se":""
+    "se":"Den sista av de logiska grindar som vi kommer att ta upp under denna genomgång är NOT-grinden, och som du antagligen har förstått vid detta laget så utför den en boolesk operation av typen NOT. NOT-grinden är den mest grundläggande av alla logiska grindar med endast en insignal och en utsignal. Tillståndet hos utsignalen är normalt satt till Högt och går endast till Lågt när den enda insignalen har tillståndet Högt, med andra ord, den \"inverterar\" insignalen. Denna logiska grind kallas därför ibland för en Inverterare. Dessa egenskaper can uttryckas i följande sanningstabell:"
   },
   "not-gate-text2":{
-    "en":"The output from a NOT gate only returns High again when its input is at Low, giving us the Boolean expression of: !A = Q. Then we can define the operation of a single input digital logic NOT gate as being: “If A is NOT true, then Q is true”.",
-    "se":""
+    "en":"The output from a NOT gate only returns High again when its input is at Low, giving us the Boolean expression of: !INPUT = OUTPUT. Then we can define the operation of a single input digital logic NOT gate as being: “If INPUT is NOT true, then OUTPUT is true”.",
+    "se":"Utsignalen från en NOT-grind återgår endast till Hög igen när dess insignal är satt till Låg, vilket ger det booleska uttrycket: !INPUT = OUTPUT. Vi kan definiera operationen av en NOT-grind med en insignal enligt: “Om INPUT INTE är sann, så är OUTPUT sann”."
   },
   "not-gate-text3":{
-    "en":" In the simple circuit below we have added a logic NOT gate that is connected to an input and an output. Try each combination of inputs given in the NOT gate's truth table above, and see how the output changes!",
-    "se":""
+    "en":"In the simple circuit below we have added a logic NOT gate that is connected to an input and an output. Try each combination of inputs given in the NOT gate's truth table above, and see how the output changes!",
+    "se":"I den simpla kretsen nedan har vi lagt till en logisk NOT-grind med en insignal och en utsignal. Testa varje kombination av insignaler givet i NOT-grindens sanningstabell och se hur utsignalen ändras!"
   },
   "logic-sim-title":{
     "en":"Logic Circuit Simulator",
-    "se":"Logisk Krets Simulator"
+    "se":"Logisk Kretssimulator"
   },
   "logic-sim-text":{
-    "en":"Now that you have some basic knowledge about some of the most common logical gates you can practice your skills in this circuit simulator below. It works similarly to the simple circuit examples you have encountered earlier, but instead of just having the freedom of toggling the inputs from Low to High, you can now create complete circuits on your own! In the menus you can choose the components you want,  and then add them to the \"circuit board\" by selecting and dragging them. Once on the board, inputs can be connected to outputs by clicking and dragging from one of the component's inputs/output to another one. Right clicking on the board will give you a context menu providing undo/redo actions as well as delete, copy and paste. Have fun!",
-    "se":""
+    "en":"Now that you have some basic knowledge about some of the most common logical gates you can practice your skills in this circuit simulator below. It works similarly to the simple circuit examples you have encountered earlier, but instead of just having the freedom of toggling the inputs from Low to High, you can now create complete circuits on your own! In the menus you can choose the components you want,  and then add them to the \"circuit board\" by selecting and dragging them. Once on the board, inputs can be connected to outputs by clicking and dragging from one of the component's inputs/output to another one. Right clicking on the board will give you a context menu providing undo/redo actions as well as delete, copy and paste. Good luck!",
+    "se":"Nu när du har grundläggande kunskaper om de mest förekommande logiska grindarna så kan du öva och testa dina färdigheter i denna kretssimulator här nedan. Den fungerar liknande de simpla kretsexempel som du har träffat på tidigare, men istället för att bara ha möjligheten att växla insignalerna från Låg till Hög så kan du nu konstruera fullständiga kretsar helt själv! I menyerna kan du välja de komponenter du vill ha och sedan lägga till dem på \"kretskortet\" genom att dra dem. När de väl finns på kretskortet så kan insignaler kopplas till utsignaler genom att klicka och dra från en av komponentens insignaler/utsignaler till en annan. Ett högerklick på kretskortet kommer att visa en innehållsmeny som möjliggör åtgärder så som ångra och göra om, men också radera, kopiera och klistra in komponenter. Lycka till!"
   },
   "logic-gates":{
     "en":"Logic Gates",
