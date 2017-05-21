@@ -15,7 +15,7 @@
     <script src="javascript/pythonGame.js"></script>
 
 
-    <title>Python</title>
+    <title class="text-translate" data-translate-key="title"></title>
 </head>
 <body id="index">
 
@@ -58,7 +58,7 @@
         </div>
         <div id="header-text">
             <img alt="logo-IT" src="resources/ITloggaWhite.png"/>
-            <h1>Curious About IT</h1>
+            <h1 class="text-translate" data-translate-key="title"></h1>
         </div>
     </header>
 
@@ -101,9 +101,13 @@
         <p class="text-translate" data-translate-key="try-it-yourself">
             <!--Now you try! Write a python code so that when it executes it says "Good bye!"-->
         </p>
+        <br>
 
-        <form autocomplete="off">
-            Write your code below: <br>
+        <p class="text-translate" data-translate-key="code-below">
+            <!--Now you try! Write a python code so that when it executes it says "Good bye!"-->
+        </p>
+
+        <form spellcheck="false" autocomplete="off">
             <input  type="text" name="writtenCode">
         </form>
 
@@ -119,9 +123,58 @@
             <!--Error! You must have written the code wrong, try again-->
         </div>
 
-        <h1 class="text-translate" data-translate-key="text-editor">
+        <h1 class="text-translate" data-translate-key="Variables-and-types">
             <!--Text editor-->
         </h1>
+
+        <p class="text-translate" data-translate-key="vat-text">
+            <!-- variables and text -->
+        </p>
+        <br>
+
+        <div  class="code5">
+            one = 1 <br>
+            two = 2 <br>
+            three = one + two <br>
+            print(three)
+        </div>
+
+        <button id="result-btn2" class="text-translate" data-translate-key="run-code">
+            <!--Run code-->
+        </button>
+
+        <div class="code6" style="display:none;">
+            3
+        </div>
+
+        <p class="text-translate" data-translate-key="try-it-yourself2">
+            <!--Now you try! Write a python code so that when it executes it says "Good bye!"-->
+        </p>
+
+        <form spellcheck="false" autocomplete="off">
+            <input  type="text" name="writtenCode2">
+        </form>
+
+        <button  id="result-btn3" class="text-translate" data-translate-key="run-code">
+            <!--Run code-->
+        </button>
+
+        <div class="code7" style="display:none;">
+            Hello World!
+        </div>
+
+        <div class="code4 text-translate" style="display:none;" data-translate-key="error-msg">
+            <!--Error! You must have written the code wrong, try again-->
+        </div>
+
+        <h1 class="text-translate" data-translate-key="test-python">
+            <!--Text editor-->
+        </h1>
+
+        <p class="text-translate" data-translate-key="pPython">
+            <!-- variables and text -->
+        </p>
+        <br>
 
         <canvas id="canvas" width="450" height="450"></canvas>
 

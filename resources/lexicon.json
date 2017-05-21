@@ -243,8 +243,38 @@
     "en":"Logisim",
     "se":"Logisim"
   },
+  "title":{
+    "en":"Curious about IT",
+    "se":"Nyfiken på IT"
+  },
+  "Variables-and-types":{
+    "en":"Variables and types",
+    "se":"Variabler och typer"
+  },
+  "vat-text":{
+    "en":"In Python you have variables to store data. It makes it easier to keep track of values and you do not need to write long strings over and over again. Press the code example below and you will se what the program would produce.",
+    "se":"I Python har vi variabler för att förvara data. Det gör det enklare att hålla reda på värden och du behöver inte skriva långa strängar om och om igen. Se kodexemplet nedan för att se vad programmet gör."
+  },
+  "code-below":{
+    "en":"Write your code below:",
+    "se":"Skriv din kod här:"
+  },
+  "test-python":{
+  "en":"Possibilities with Python",
+  "se":"Möjligheterna med Python"
+  },
+  "pPython":{
+    "en":"When you understand how to program in Python you will be able to create own programs. For example you would be able to create your own Python game where you play with a Python, also known as the game snake. Below you can play this game. ",
+    "se":"När du förstår hur du ska programera i Python kommer du kunna skapa dina egna Python-program. Exempelvis skulle du kunna skapa ditt egna Pythonspel där du spelar med en pytonorm, ett spel som annars är känt som snake. Nedanför kan du spela det här spelet."
+  },
+  "try-it-yourself2":{
+    "en":"Now you try! Write python code so that when it executes it says \"Hello World!\" using variables",
+    "se":"Testa själv! Skriv python kod som när den körs säger \"Hello World!\" med hjälp av variabler"
+  },
   "":{
     "en":"",
     "se":""
   }
+
+
 }

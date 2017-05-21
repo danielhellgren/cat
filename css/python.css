@@ -61,6 +61,44 @@
 }
 
 
+.code5{
+    font-family: Andale Mono, monospace;
+    padding: 1%;
+    border: #020202;
+    border-style: solid;
+    width: 40%;
+    text-align: center;
+    margin-left: 29.5%;
+    margin-right: 29.5%;
+    margin-bottom: 2%;
+}
+
+.code6{
+    font-family: Andale Mono, monospace;
+    padding: 1%;
+    border: #020202;
+    border-style: solid;
+    width: 40%;
+    text-align: center;
+    margin-left: 29.5%;
+    margin-right: 29.5%;
+    margin-bottom: 2%;
+}
+
+
+.code7{
+    font-family: Andale Mono, monospace;
+    padding: 1%;
+    border: #020202;
+    border-style: solid;
+    width: 40%;
+    text-align: center;
+    margin-left: 29.5%;
+    margin-right: 29.5%;
+    margin-bottom: 2%;
+}
+
+
 
 
 /*--------------BUTTON 0------------ */
@@ -114,6 +152,59 @@
 
 #result-btn1:focus {outline:0;}
 
+
+/*--------------BUTTON 2------------ */
+#result-btn2{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    margin-left: 43%;
+    margin-right: 43%;
+    width: 14%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#result-btn2:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#result-btn2:active {
+    background-color: #555555;
+    color: white;
+}
+
+#result-btn2:focus {outline:0;}
+
+
+/*--------------BUTTON 3------------ */
+#result-btn3{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    margin-left: 43%;
+    margin-right: 43%;
+    width: 14%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#result-btn3:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#result-btn3:active {
+    background-color: #555555;
+    color: white;
+}
+
+#result-btn3:focus {outline:0;}
+
+
 /*
 -------------FORM-----------------
 */
@@ -133,7 +224,7 @@ form input {
     text-align: center;
     margin-top: 2%;
     margin-bottom: 2%;
-    height:15px;
+    height: 40px;
     border-style: solid;
     font-family: Andale Mono, monospace;
     font-size: medium;
