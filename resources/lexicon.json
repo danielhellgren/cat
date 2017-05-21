@@ -59,6 +59,10 @@
     "en":"Svenska",
     "se":"English"
   },
+  "index":{
+    "en":"Home",
+    "se":"Hem"
+  },
   "":{
     "en":"",
     "se":""
