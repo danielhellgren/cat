@@ -18,5 +18,16 @@
 }
 
 .navig {
-    color: black;
+    text-decoration: none;
+}
+
+
+.navig:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+.active {
+    color: white;
 }

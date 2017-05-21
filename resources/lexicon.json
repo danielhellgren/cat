@@ -56,8 +56,8 @@
     "se":"Binära Tal"
   },
   "language-swap":{
-    "en":"Svenska",
-    "se":"English"
+    "en":"English",
+    "se":"Svenska"
   },
   "gates-intro-title":{
     "en":"Logic Gates - An Introduction",
@@ -234,6 +234,14 @@
   "index":{
     "en":"Home",
     "se":"Hem"
+  },
+  "python":{
+    "en":"Python",
+    "se":"Python"
+  },
+  "logisim":{
+    "en":"Logisim",
+    "se":"Logisim"
   },
   "":{
     "en":"",
