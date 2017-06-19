@@ -1,11 +1,17 @@
 
-
+/*
+ * upon ready print the result of binary to decimal conv.
+  * and show dropdown menu if in mobile view
+ */
 $(document).ready( function() {
     printBinaryResult();
+
+    //creation of dropdown menu
     document.getElementById("mobile-menu").addEventListener("click", function() {
         this.classList.toggle("change");
         var dropdown = document.getElementById("dropdownbinary");
         dropdown.classList.toggle("show");
+        //if it should be shown or not
         if (dropdown.classList.contains("show")) {
             console.log(document.getElementsByClassName("content")[0]);
             document.getElementsByClassName("content")[0].style.zIndex = "-1";
@@ -19,11 +25,15 @@ $(document).ready( function() {
     });
 });
 
-// count from 0 to 255 and print - loop indefinetly
+/*
+* print an incrementing number at the first div of class result-text
+* the result is the binary to decimal convertion
+*/
 function printBinaryResult(){
 
     var textDiv = document.getElementsByClassName("result-text")[0];
     var i = 1;
+    //count from 0 to 255 and print - loop indefinitely
     window.setInterval(function(){
         if(i > 255){
             i = 0;
