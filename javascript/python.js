@@ -1,3 +1,5 @@
+
+/* SHOW DROP DOWN MENU */
 $().ready(function() {
     document.getElementById("mobile-menu").addEventListener("click", function() {
         this.classList.toggle("change");

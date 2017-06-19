@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SCRIPTS -->
     <script src="javascript/jquery-1.11.0.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/index.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- STYLESHEET -->
+    <script src="./javascript/translator.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="css/languageButton.css"/>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
-    <script src="javascript/index.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="./javascript/translator.js"></script>
 
+    <!-- TRANSLATE -->
     <title class="text-translate" data-translate-key="title"></title>
+
     <script src="javascript/translator.js"></script>
 </head>
 <body id="index">
@@ -29,6 +33,7 @@
     </nav>
 
     <header>
+        <!-- MOBILE VERSION -->
         <div class="mobile-menu-wrapper">
             <div id="mobile-menu">
                 <div id="cont">
@@ -37,6 +42,7 @@
                     <div class="bar3"></div>
                 </div>
             </div>
+            <!-- DROP DOWN MENU -->
             <div id="dropdownhome" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
@@ -50,6 +56,7 @@
                 </ul>
             </div>
         </div>
+        <!-- TRANSLATE BUTTON -->
         <div class="translateButton">
             <script>
                 document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
@@ -64,25 +71,13 @@
     <div class="content" style="position: fixed">
         <div class="text1">
             <p class="text-translate" data-translate-key="intro-text">
-                <!--IT is a part of people's work and leisure.-->
-                <!--Do you want to understand how information technology functions,-->
-                <!--to influence the development and create tomorrow's technology?-->
-                <!--As a engineer from the IT program in Uppsala, you can work-->
-                <!--with information that is important to people in all of life's stages,-->
-                <!--for the functioning of society and the competitiveness of businesses.-->
+
             </p>
         <h1 class="text-translate" data-translate-key="about-program-title">
             <!--About the program-->
         </h1>
             <p class="text-translate" data-translate-key="about-program-text">
-                <!--Master programme in computer and information engineering generates-->
-                <!--sustainable education with knowledge that lasts longer.-->
-                <!--People, mathematics and programming are key ingredients in education.-->
-                <!--Theory and practice, often in project form, gives-->
-                <!--you skills you can use both for today’s and tomorrow's system.-->
-                <!--You will learn what you need to develop future counterparts to Google,-->
-                <!--Skype or iPhone. Or maybe develop prostheses with built-in computers or-->
-                <!--easy to use computers that never crashes?-->
+
             </p>
         <h1 class="text-translate" data-translate-key="degree-title">
             <!--Degree-->
@@ -94,15 +89,6 @@
             <!--About the education-->
         </h1>
             <p class="text-translate" data-translate-key="about-education-text">
-                <!--Teaching has a strong connection to the university's outstanding research-->
-                <!--in information technology. Many of the courses are characterized by-->
-                <!--innovative teaching and exam forms based on scientific anchored education.-->
-                <!--Many of the teachers have received awards for their educational teaching.<br><br>-->
-                <!--The courses are often implemented in projects in preparation for working life.-->
-                <!--Several of the projects are conducted in collaboration with students in other countries.-->
-                <!--The program concludes with a greater applied projects on a full or half semester.-->
-                <!--You work independently and creatively in an internationally oriented environment.-->
-                <!--The program is offered in Uppsala.-->
             </p>
         </div> <!-- CLOSE TEXT DIV -->
 
@@ -110,6 +96,8 @@
             <img alt="pic-IT" src="resources/ingBild.jpg"/>
             <img alt="pic-IT houses" src="resources/skola.jpg"/>
         </div> <!-- CLOSE PIC DIV -->
+
+        <!-- VIDEO -->
         <div class="video">
                 <iframe
                         src="https://www.youtube.com/embed/UvvZ9OPbXCw" allowfullscreen>
