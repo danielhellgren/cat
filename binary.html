@@ -21,6 +21,7 @@
     <!--NAVIGATION BAR-->
     <nav>
         <script>
+            //translation of navigation links and keeping langref across pages
             document.write("<a href=" + "index.html" + langRef() + " class='text-translate navig ' data-translate-key='index'></a>");
             document.write("<a href=" + "logic_circuit.html" + langRef() + " class='text-translate navig ' data-translate-key='logisim' ></a>");
             document.write("<a href=" + "binary.html" + langRef() + " class='text-translate navig active' data-translate-key='binary' ></a>");
@@ -40,7 +41,7 @@
             <div id="dropdownbinary" class="dropdowncontent animateMenu">
                 <ul>
                     <script>
-                        //            var ref = "index.html";
+                        //translation of navigation links and keeping langref across pages
                         document.write("<a href=" + "index.html" + langRef() + " class='text-translate navig ' data-translate-key='index'></a>");
                         document.write("<a href=" + "logic_circuit.html" + langRef() + " class='text-translate navig ' data-translate-key='logisim' ></a>");
                         document.write("<a href=" + "binary.html" + langRef() + " class='text-translate navig active' data-translate-key='binary' ></a>");
@@ -52,6 +53,7 @@
         </div>
         <div class="translateButton">
             <script>
+                //translation of navigation links and keeping langref across pages
                 document.write("<a href=" + langRef(langSwap()) + " class='text-translate language-swap' data-translate-key='language-swap'></a>")
             </script><!--CLOSE SCRIPT CHANGE LANGUAGE-->
         </div>
@@ -71,7 +73,9 @@
                 <p class="text-translate" data-translate-key="binary-text"></p>
             <div class="binary-animation-div">
                 <p class="text-translate" data-translate-key="animation-text"></p>
+                <!--binary animation consists of 8 separate animations and a header-->
                 <div id="binary-animation">
+                    <!--all the separate animations for each "bit"-->
                     <div class="binary-animation-number-slot" id="binary-animation-header"></div>
                     <div class="binary-animation-number-slot" id ="binary-animation-x128"></div>
                     <div class="binary-animation-number-slot" id ="binary-animation-x64"></div>
@@ -82,6 +86,7 @@
                     <div class="binary-animation-number-slot" id ="binary-animation-x2"></div>
                     <div class="binary-animation-number-slot" id ="binary-animation-x1"></div>
                     <div class="binary-animation-number-slot" id="binary-animation-result">
+                        <!--The result is simply a print function that loops indefinitely - see binary.js-->
                         <div class="result-text" id="binary-animation-result-text">0</div>
                     </div><!--CLOSE RESULT DIV-->
                 </div>
